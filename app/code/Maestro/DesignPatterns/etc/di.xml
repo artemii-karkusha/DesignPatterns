@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!--
+  ~ @author Artemii Karkusha
+  ~ @copyright Copyright (c) Artemii Karkusha
+  -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Maestro\DesignPatterns\Api\FactoryMethod\FoodFactoryMethodInterface"
+                type="Maestro\DesignPatterns\Service\FactoryMethod\FoodFactoryMethod"/>
+</config>
