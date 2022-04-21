@@ -1,20 +1,23 @@
 {
-  "name": "maestro/module-design-patterns",
-  "version": "1.0.0",
-  "description": "N/A",
-  "type": "magento2-module",
-  "require": {
-    "magento/framework": "*"
-  },
-  "license": [
-    "Open Software License (OSL)"
-  ],
-  "autoload": {
-    "files": [
-      "registration.php"
+    "name": "maestro/design-patterns",
+    "version": "1.0.0",
+    "description": "N/A",
+    "type": "magento2-module",
+    "require": {
+        "magento/framework": "*"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest"
+    },
+    "license": [
+        "Open Software License (OSL)"
     ],
-    "psr-4": {
-      "Maestro\\DesignPatterns\\": ""
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Maestro\\DesignPatterns\\": ""
+        }
     }
-  }
 }
