@@ -7,4 +7,21 @@
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <preference for="Maestro\DesignPatterns\Api\FactoryMethod\FoodFactoryMethodInterface"
                 type="Maestro\DesignPatterns\Service\FactoryMethod\FoodFactoryMethod"/>
+
+    <type name="Maestro\DesignPatterns\Service\AbstractFactory\KitchenAbstractFactory">
+        <arguments>
+            <argument name="foodsFactoryForKitchens" xsi:type="array">
+                <item name="americanFoodFactory"
+                      xsi:type="object">Maestro\DesignPatterns\Service\AbstractFactory\AmericanFoodFactoryMethod</item>
+                <item name="ukrainianFoodFactory"
+                      xsi:type="object">Maestro\DesignPatterns\Service\AbstractFactory\UkrainianFoodFactoryMethod</item>
+                <item name="japaneseFoodFactory"
+                      xsi:type="object">Maestro\DesignPatterns\Service\AbstractFactory\JapaneseFoodFactoryMethod</item>
+            </argument>
+        </arguments>
+    </type>
+
+
+
+
 </config>

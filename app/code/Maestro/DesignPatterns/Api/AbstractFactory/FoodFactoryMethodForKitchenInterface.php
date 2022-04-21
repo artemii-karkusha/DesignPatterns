@@ -6,11 +6,12 @@
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Api\FactoryMethod;
+namespace Maestro\DesignPatterns\Api\AbstractFactory;
 
 use InvalidArgumentException;
+use Maestro\DesignPatterns\Api\FactoryMethod\FoodInterface;
 
-interface FoodFactoryMethodInterface
+interface FoodFactoryMethodForKitchenInterface
 {
     /**
      * Create food by foodName
@@ -27,4 +28,11 @@ interface FoodFactoryMethodInterface
      * @return FoodInterface[]
      */
     public function createFoods(): array;
+
+    /**
+     * Get kitchen name
+     *
+     * @return string
+     */
+    public function getKitchenName(): string;
 }
