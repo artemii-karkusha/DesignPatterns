@@ -22,6 +22,6 @@
     </type>
 
 
-
-
+    <preference for="Maestro\DesignPatterns\Api\Prototype\CarInterface"
+                type="Maestro\DesignPatterns\Model\Prototype\Car"/>
 </config>
