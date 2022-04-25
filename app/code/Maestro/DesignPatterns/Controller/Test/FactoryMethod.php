@@ -53,8 +53,8 @@ class FactoryMethod implements HttpGetActionInterface
         try {
             $meat = $this->bake->cook(Meat::MEAT_NAME);
             $potato = $this->bake->cook(Potato::MEAT_NAME);
-            $responseText = 'Meat getName is ' .  $meat->getName();
-            $responseText .= ', Potato getName is ' .  $potato->getName();
+            $responseText = sprintf("Meat getName is %s", $meat->getName());
+            $responseText .= sprintf(", Potato getName is %s", $potato->getName());
         } catch (InvalidArgumentException $invalidArgumentException) {
             throw new NotFoundException(__($invalidArgumentException->getMessage()));
         }
