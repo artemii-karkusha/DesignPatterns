@@ -24,4 +24,6 @@
 
     <preference for="Maestro\DesignPatterns\Api\Prototype\CarInterface"
                 type="Maestro\DesignPatterns\Model\Prototype\Car"/>
+    <preference for="Maestro\DesignPatterns\Api\Adapter\NovaPoshtaAdapterInterface"
+                type="Maestro\DesignPatterns\Service\Adapter\NovaPoshtaAdapter"/>
 </config>
