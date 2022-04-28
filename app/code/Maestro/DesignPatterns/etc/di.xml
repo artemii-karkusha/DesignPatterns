@@ -48,4 +48,6 @@
 
     <preference for="Maestro\DesignPatterns\Api\Builder\PizzaInterface"
                 type="Maestro\DesignPatterns\Model\Builder\Pizza"/>
+    <preference for="Maestro\DesignPatterns\Api\Adapter\NovaPoshtaAdapterInterface"
+                type="Maestro\DesignPatterns\Service\Adapter\NovaPoshtaAdapter"/>
 </config>
