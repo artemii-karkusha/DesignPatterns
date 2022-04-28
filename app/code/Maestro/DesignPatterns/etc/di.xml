@@ -24,6 +24,30 @@
 
     <preference for="Maestro\DesignPatterns\Api\Prototype\CarInterface"
                 type="Maestro\DesignPatterns\Model\Prototype\Car"/>
+    <preference for="Maestro\DesignPatterns\Api\Builder\PizzaIngredientFactoryMethodInterface"
+                type="Maestro\DesignPatterns\Service\Builder\PizzaIngredientFactoryMethod"/>
+    <preference for="Maestro\DesignPatterns\Api\Builder\PizzaBuilderInterface"
+                type="Maestro\DesignPatterns\Service\Builder\PizzaBuilder"/>
+
+    <type name="Maestro\DesignPatterns\Service\Builder\PizzaIngredientFactoryMethod">
+        <arguments>
+            <argument name="pizzaIngredients" xsi:type="array">
+                <item name="cheese"
+                      xsi:type="string">Maestro\DesignPatterns\Model\Builder\Cheese</item>
+                <item name="bacon"
+                      xsi:type="string">Maestro\DesignPatterns\Model\Builder\Bacon</item>
+                <item name="mushrooms"
+                      xsi:type="string">Maestro\DesignPatterns\Model\Builder\Mushrooms</item>
+                <item name="pineapples"
+                      xsi:type="string">Maestro\DesignPatterns\Model\Builder\Pineapples</item>
+                <item name="seafood.php"
+                      xsi:type="string">Maestro\DesignPatterns\Model\Builder\Seafood</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <preference for="Maestro\DesignPatterns\Api\Builder\PizzaInterface"
+                type="Maestro\DesignPatterns\Model\Builder\Pizza"/>
     <preference for="Maestro\DesignPatterns\Api\Adapter\NovaPoshtaAdapterInterface"
                 type="Maestro\DesignPatterns\Service\Adapter\NovaPoshtaAdapter"/>
 </config>
