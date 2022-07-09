@@ -22,6 +22,7 @@ class Composite implements HttpGetActionInterface
     /**
      * @param LeafFactory $leafFactory
      * @param NodeFactory $nodeFactory
+     * @param ResultFactory $resultFactory
      */
     public function __construct(
         private LeafFactory $leafFactory,

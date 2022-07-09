@@ -50,4 +50,7 @@
                 type="Maestro\DesignPatterns\Model\Builder\Pizza"/>
     <preference for="Maestro\DesignPatterns\Api\Adapter\NovaPoshtaAdapterInterface"
                 type="Maestro\DesignPatterns\Service\Adapter\NovaPoshtaAdapter"/>
+
+    <preference for="Maestro\DesignPatterns\Api\CompositeForParcels\Service\ParcelManagementInterface"
+                type="Maestro\DesignPatterns\Service\CompositeForParcels\ParcelManagement"/>
 </config>
