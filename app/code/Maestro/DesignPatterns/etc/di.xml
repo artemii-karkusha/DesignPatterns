@@ -12,11 +12,14 @@
         <arguments>
             <argument name="foodsFactoryForKitchens" xsi:type="array">
                 <item name="americanFoodFactory"
-                      xsi:type="object">Maestro\DesignPatterns\Service\AbstractFactory\AmericanFoodFactoryMethod</item>
+                      xsi:type="object">Maestro\DesignPatterns\Service\AbstractFactory\AmericanFoodFactoryMethod
+                </item>
                 <item name="ukrainianFoodFactory"
-                      xsi:type="object">Maestro\DesignPatterns\Service\AbstractFactory\UkrainianFoodFactoryMethod</item>
+                      xsi:type="object">Maestro\DesignPatterns\Service\AbstractFactory\UkrainianFoodFactoryMethod
+                </item>
                 <item name="japaneseFoodFactory"
-                      xsi:type="object">Maestro\DesignPatterns\Service\AbstractFactory\JapaneseFoodFactoryMethod</item>
+                      xsi:type="object">Maestro\DesignPatterns\Service\AbstractFactory\JapaneseFoodFactoryMethod
+                </item>
             </argument>
         </arguments>
     </type>
@@ -33,15 +36,20 @@
         <arguments>
             <argument name="pizzaIngredients" xsi:type="array">
                 <item name="cheese"
-                      xsi:type="string">Maestro\DesignPatterns\Model\Builder\Cheese</item>
+                      xsi:type="string">Maestro\DesignPatterns\Model\Builder\Cheese
+                </item>
                 <item name="bacon"
-                      xsi:type="string">Maestro\DesignPatterns\Model\Builder\Bacon</item>
+                      xsi:type="string">Maestro\DesignPatterns\Model\Builder\Bacon
+                </item>
                 <item name="mushrooms"
-                      xsi:type="string">Maestro\DesignPatterns\Model\Builder\Mushrooms</item>
+                      xsi:type="string">Maestro\DesignPatterns\Model\Builder\Mushrooms
+                </item>
                 <item name="pineapples"
-                      xsi:type="string">Maestro\DesignPatterns\Model\Builder\Pineapples</item>
+                      xsi:type="string">Maestro\DesignPatterns\Model\Builder\Pineapples
+                </item>
                 <item name="seafood.php"
-                      xsi:type="string">Maestro\DesignPatterns\Model\Builder\Seafood</item>
+                      xsi:type="string">Maestro\DesignPatterns\Model\Builder\Seafood
+                </item>
             </argument>
         </arguments>
     </type>
@@ -54,5 +62,15 @@
     <preference for="Maestro\DesignPatterns\Api\CompositeForParcels\Service\ParcelManagementInterface"
                 type="Maestro\DesignPatterns\Service\CompositeForParcels\ParcelManagement"/>
     <preference for="Maestro\DesignPatterns\Api\Facade\CalculatorFacadeInterface"
-                type="Maestro\DesignPatterns\Service\Facade\CalculatorFacade"/>
+                type="Maestro\DesignPatterns\Service\Proxy\CalculatorFacadeWithCaching"/>
+
+    <!--Proxy-->
+    <type name="Maestro\DesignPatterns\Service\Proxy\CalculatorFacadeWithCaching">
+        <arguments>
+            <argument name="calculatorFacade"
+                xsi:type="object">Maestro\DesignPatterns\Service\Facade\CalculatorFacade</argument>
+        </arguments>
+    </type>
+    <!--/Proxy-->
+
 </config>
