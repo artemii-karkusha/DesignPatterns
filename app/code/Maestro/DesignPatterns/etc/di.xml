@@ -73,4 +73,19 @@
     </type>
     <!--/Proxy-->
 
+    <!--CoR-->
+    <preference for="Maestro\DesignPatterns\Api\CoR\Model\PhoneInterface" type="Maestro\DesignPatterns\Model\CoR\Phone"/>
+    <preference for="Maestro\DesignPatterns\Api\CoR\Service\EmergencyServicesManagerInterface"
+                type="Maestro\DesignPatterns\Service\CoR\EmergencyServicesManager"/>
+    <type name="Maestro\DesignPatterns\Service\CoR\EmergencyServicesManager">
+        <arguments>
+            <argument name="emergencyServicesCallers" xsi:type="array">
+                <item name="0" xsi:type="object">Maestro\DesignPatterns\Service\CoR\FireDepartmentCallerService</item>
+                <item name="1" xsi:type="object">Maestro\DesignPatterns\Service\CoR\PoliceDepartmentCallerService</item>
+                <item name="2" xsi:type="object">Maestro\DesignPatterns\Service\CoR\MedicalServiceCaller</item>
+            </argument>
+        </arguments>
+    </type>
+    <!--/CoR-->
+
 </config>
