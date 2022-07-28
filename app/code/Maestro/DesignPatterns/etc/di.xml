@@ -88,4 +88,18 @@
     </type>
     <!--/CoR-->
 
+    <!--Command-->
+    <preference for="Maestro\DesignPatterns\Api\Command\Service\PizzaCookerInterface"
+                type="Maestro\DesignPatterns\Service\Command\PizzaCooker"/>
+
+    <type name="Maestro\DesignPatterns\Service\Command\PizzaCooker">
+        <arguments>
+            <argument name="pizzaCommandsFactoryList" xsi:type="array">
+                <item name="bacon" xsi:type="object">Maestro\DesignPatterns\Service\Command\AddBaconCommandFactory</item>
+                <item name="cheese" xsi:type="object">Maestro\DesignPatterns\Service\Command\AddCheeseCommandFactory</item>
+            </argument>
+        </arguments>
+    </type>
+    <!--/Command-->
+
 </config>

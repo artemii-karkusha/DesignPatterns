@@ -17,14 +17,14 @@ class Pizza implements PizzaInterface
     /**
      * @var IngredientForPizzaInterface[]
      */
-    private array $ingredient = [];
+    private array $ingredients = [];
 
     /**
      * @inheritDoc
      */
     public function getIngredients(): array
     {
-        return $this->ingredient;
+        return $this->ingredients;
     }
 
     /**
@@ -33,14 +33,24 @@ class Pizza implements PizzaInterface
     public function setIngredients(array $ingredients): PizzaInterface
     {
         foreach ($ingredients as $ingredient) {
-            if ($ingredient instanceof IngredientForPizzaInterface) {
-                continue;
+            if (!$ingredient instanceof IngredientForPizzaInterface) {
+                throw new InvalidArgumentException(
+                    (string)__('Ingredient the %1 have incorrect type', $ingredient->getName())
+                );
             }
-            throw new InvalidArgumentException(
-                (string)__('Ingredient the %1 have incorrect type', $ingredient->getName())
-            );
+
+            $this->addIngredient($ingredient);
         }
-        $this->ingredient = $ingredients;
+
+        return $this;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function addIngredient(IngredientForPizzaInterface $ingredientForPizza): PizzaInterface
+    {
+        $this->ingredients[] = $ingredientForPizza;
         return $this;
     }
 }

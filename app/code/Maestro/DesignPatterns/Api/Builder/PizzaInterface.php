@@ -26,4 +26,10 @@ interface PizzaInterface
      * @throws InvalidArgumentException
      */
     public function setIngredients(array $ingredients): PizzaInterface;
+
+    /**
+     * @param IngredientForPizzaInterface $ingredientForPizza
+     * @return PizzaInterface
+     */
+    public function addIngredient(IngredientForPizzaInterface $ingredientForPizza): PizzaInterface;
 }
