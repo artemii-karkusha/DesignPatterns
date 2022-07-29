@@ -16,7 +16,7 @@ use Maestro\DesignPatterns\Service\CompositeForParcels\ParcelManagement;
 class CompositeForParcels implements HttpGetActionInterface
 {
     /**
-     *
+     * @param ParcelManagementInterface $parcelManagement
      * @param ResultFactory $resultFactory
      */
     public function __construct(
@@ -39,7 +39,7 @@ class CompositeForParcels implements HttpGetActionInterface
     private function getContents(): string
     {
         /** @noinspection PhpUnhandledExceptionInspection */
-        $containerOfPercel = $this->parcelManagement->getParcelById(ParcelManagement::EXAMPLE_PARCEL_UUID);
-        return '';
+        $containerOfParcel = $this->parcelManagement->getParcelById(ParcelManagement::EXAMPLE_PARCEL_UUID);
+        return (string)$containerOfParcel->getWeight();
     }
 }
