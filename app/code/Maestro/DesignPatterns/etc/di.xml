@@ -102,4 +102,20 @@
     </type>
     <!--/Command-->
 
+    <!--Interpreter-->
+
+    <preference for="Maestro\DesignPatterns\Api\Interpreter\PizzaRecipeInterpreterInterface"
+                type="Maestro\DesignPatterns\Service\Interpreter\PizzaRecipeInterpreter"/>
+    <type name="Maestro\DesignPatterns\Service\Interpreter\PizzaRecipeInterpreter">
+        <arguments>
+            <argument name="pizzaExpressionsList" xsi:type="array">
+                <item name="addIngredientsExpression"
+                      xsi:type="object">Maestro\DesignPatterns\Service\Interpreter\AddIngredientExpression</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <!--/Interpreter-->
+
+
 </config>
