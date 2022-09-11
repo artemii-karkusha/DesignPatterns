@@ -88,6 +88,7 @@
     </type>
     <!--/CoR-->
 
+
     <!--Command-->
     <preference for="Maestro\DesignPatterns\Api\Command\Service\PizzaCookerInterface"
                 type="Maestro\DesignPatterns\Service\Command\PizzaCooker"/>
@@ -102,8 +103,8 @@
     </type>
     <!--/Command-->
 
-    <!--Interpreter-->
 
+    <!--Interpreter-->
     <preference for="Maestro\DesignPatterns\Api\Interpreter\PizzaRecipeInterpreterInterface"
                 type="Maestro\DesignPatterns\Service\Interpreter\PizzaRecipeInterpreter"/>
     <type name="Maestro\DesignPatterns\Service\Interpreter\PizzaRecipeInterpreter">
@@ -114,8 +115,26 @@
             </argument>
         </arguments>
     </type>
-
     <!--/Interpreter-->
+
+
+    <!--/Iterator-->
+    <preference for="Maestro\DesignPatterns\Api\Iterator\Model\BookInterface"
+                type="Maestro\DesignPatterns\Model\Iterator\Book"/>
+    <type name="Maestro\DesignPatterns\Service\Iterator\IteratorFactoryMethod">
+        <arguments>
+            <argument name="factoriesIterators" xsi:type="array">
+                <item name="books_iterator"
+                      xsi:type="object">Maestro\DesignPatterns\Service\Iterator\BooksIteratorFactory</item>
+                <item name="books_sorted_by_author_name_iterator"
+                      xsi:type="object">Maestro\DesignPatterns\Service\Iterator\BooksSortedByAuthorNameIteratorFactory</item>
+                <item name="books_sorted_by_book_name_iterator"
+                      xsi:type="object">Maestro\DesignPatterns\Service\Iterator\BooksSortedByBookNameIteratorFactory</item>
+            </argument>
+        </arguments>
+    </type>
+    <!--/Iterator-->
+
 
 
 </config>
