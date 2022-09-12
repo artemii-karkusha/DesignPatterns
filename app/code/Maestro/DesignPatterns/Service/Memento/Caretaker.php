@@ -11,6 +11,7 @@ namespace Maestro\DesignPatterns\Service\Memento;
 use Maestro\DesignPatterns\Api\Memento\CaretakerInterface;
 use Maestro\DesignPatterns\Api\Memento\Model\ItCanSaveAndRestoreState;
 use Maestro\DesignPatterns\Api\Memento\Model\MementoInterface;
+use Magento\Framework\Exception\NotFoundException;
 
 class Caretaker implements CaretakerInterface
 {
@@ -38,6 +39,27 @@ class Caretaker implements CaretakerInterface
         }
 
         $item->restore(memento: array_pop($this->mementos[$item->getGroupLabel()]));
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function restoreToVersion(ItCanSaveAndRestoreState $item, int $version): void
+    {
+        if (!isset($this->mementos[$item->getGroupLabel()])) {
+            return;
+        }
+
+        foreach ($this->mementos[$item->getGroupLabel()] as $memento) {
+            if ($memento->getVersion() !== $version){
+                continue;
+            }
+
+            $item->restore($memento);
+            return;
+        }
+
+        throw new NotFoundException(__('%1 version is not exist', $version));
     }
 
     /**

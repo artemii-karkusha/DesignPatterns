@@ -13,6 +13,7 @@ use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\ResultFactory;
 use Maestro\DesignPatterns\Api\Memento\Model\TextAreaInterfaceFactory;
 use Maestro\DesignPatterns\Api\Memento\CaretakerInterface;
+use Magento\Framework\Exception\NotFoundException;
 
 class Memento implements HttpGetActionInterface
 {
@@ -62,5 +63,16 @@ class Memento implements HttpGetActionInterface
         echo 'after Undo <br>';
         echo $textArea->getText() . '<br>';
         $this->caretaker->showHistory($textArea);
+        echo 'before restoreToVersion 1<br>';
+        echo $textArea->getText() . '<br>';
+        $this->caretaker->restoreToVersion($textArea, 1);
+        echo 'after restoreToVersion 1<br>';
+        echo $textArea->getText() . '<br>';
+
+        try {
+            $this->caretaker->restoreToVersion($textArea, 25);
+        } catch (NotFoundException $notFoundException) {
+            echo $notFoundException->getMessage() . '<br>';
+        }
     }
 }
