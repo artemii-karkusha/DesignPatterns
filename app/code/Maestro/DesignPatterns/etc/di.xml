@@ -164,4 +164,13 @@
     </type>
     <!--/Mediator-->
 
+    <!--Memento-->
+    <preference for="Maestro\DesignPatterns\Api\Memento\Model\TextAreaInterface"
+                type="Maestro\DesignPatterns\Model\Memento\TextArea"/>
+    <preference for="Maestro\DesignPatterns\Api\Memento\Model\MementoInterface"
+                type="Maestro\DesignPatterns\Model\Memento\ConcreteMemento"/>
+    <preference for="Maestro\DesignPatterns\Api\Memento\CaretakerInterface"
+                type="Maestro\DesignPatterns\Service\Memento\Caretaker"/>
+    <!--/Memento-->
+
 </config>
