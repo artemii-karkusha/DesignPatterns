@@ -47,18 +47,18 @@ class Iterator implements HttpGetActionInterface
     {
        $book1 = $this->bookInterfaceFactory->create([
            'name' => '1Title',
-           'authorName' => '1Author',
+           'authorName' => '2Author',
            'yearOfPublishing' => '1995'
        ]);
         $book2 = $this->bookInterfaceFactory->create([
             'name' => '2Title',
-            'authorName' => '2Author',
+            'authorName' => '3Author',
             'yearOfPublishing' => '1996'
         ]);
         $book3 = $this->bookInterfaceFactory->create([
             'name' => '3Title',
-            'authorName' => '3Author',
-            'yearOfPublishing' => '1997'
+            'authorName' => '1Author',
+            'yearOfPublishing' => '1992'
         ]);
 
         $this->collectionOfBooks->addItem($book3)
