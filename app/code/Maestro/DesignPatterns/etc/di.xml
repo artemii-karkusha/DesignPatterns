@@ -118,7 +118,7 @@
     <!--/Interpreter-->
 
 
-    <!--/Iterator-->
+    <!--Iterator-->
     <preference for="Maestro\DesignPatterns\Api\Iterator\Model\BookInterface"
                 type="Maestro\DesignPatterns\Model\Iterator\Book"/>
     <type name="Maestro\DesignPatterns\Service\Iterator\IteratorFactoryMethod">
@@ -135,6 +135,33 @@
     </type>
     <!--/Iterator-->
 
-
+    <!--Mediator-->
+    <preference for="Maestro\DesignPatterns\Api\Mediator\ConciergeServiceInterface"
+                type="Maestro\DesignPatterns\Service\Mediator\ConciergeServiceManager"/>
+    <preference for="Maestro\DesignPatterns\Api\Mediator\NotificationMediatorInterface"
+                type="Maestro\DesignPatterns\Service\Mediator\NotificationMediatorManager"/>
+    <type name="Maestro\DesignPatterns\Service\Mediator\ConciergeServiceManager">
+        <arguments>
+            <argument name="conciergeServices" xsi:type="array">
+                <item name="CallATaxi"
+                      xsi:type="object">Maestro\DesignPatterns\Service\Mediator\ConciergeCallATaxiService</item>
+                <item name="CallAMaster"
+                      xsi:type="object">Maestro\DesignPatterns\Service\Mediator\ConciergeCallAMasterService</item>
+                <item name="DeliveryAFlower"
+                      xsi:type="object">Maestro\DesignPatterns\Service\Mediator\ConciergeDeliveryAFlowerService</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Maestro\DesignPatterns\Service\Mediator\NotificationMediatorManager">
+        <arguments>
+            <argument name="notifyMediators" xsi:type="array">
+                <item name="CallATaxi"
+                      xsi:type="object">Maestro\DesignPatterns\Service\Mediator\NotificationMediatorAboutCallATaxi</item>
+                <item name="CallAMaster"
+                      xsi:type="object">Maestro\DesignPatterns\Service\Mediator\NotificationMediatorAboutCallAMaster</item>
+            </argument>
+        </arguments>
+    </type>
+    <!--/Mediator-->
 
 </config>
