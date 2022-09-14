@@ -173,4 +173,23 @@
                 type="Maestro\DesignPatterns\Service\Memento\Caretaker"/>
     <!--/Memento-->
 
+    <!--Observer-->
+    <preference for="Maestro\DesignPatterns\Api\Observer\Model\StormInterface"
+                type="Maestro\DesignPatterns\Model\Observer\Storm"/>
+    <preference for="Maestro\DesignPatterns\Api\Observer\WeatherNotifierInterface"
+                type="Maestro\DesignPatterns\Service\Observer\StormNotifier"/>
+    <preference for="Maestro\DesignPatterns\Api\Observer\WeatherServiceInterface"
+                type="Maestro\DesignPatterns\Service\Observer\WeatherService"/>
+    <type name="Maestro\DesignPatterns\Service\Observer\StormNotifier">
+        <arguments>
+            <argument name="weatherObservers" xsi:type="array">
+                <item name="AirportWeatherObserver"
+                      xsi:type="object">Maestro\DesignPatterns\Service\Observer\AirportWeatherObserver</item>
+                <item name="SchoolWeatherObserver"
+                      xsi:type="object">Maestro\DesignPatterns\Service\Observer\SchoolWeatherObserver</item>
+            </argument>
+        </arguments>
+    </type>
+    <!--/Observer-->
+
 </config>
