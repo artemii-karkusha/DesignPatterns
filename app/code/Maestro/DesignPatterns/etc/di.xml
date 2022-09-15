@@ -196,6 +196,15 @@
     <preference for="Maestro\DesignPatterns\Api\State\Model\OvenInterface"
                 type="Maestro\DesignPatterns\Model\State\Oven"/>
     <!--/State-->
-    //OvenInterface
+
+    <!--Strategy-->
+    <preference for="Maestro\DesignPatterns\Api\Strategy\SorterListInterface"
+                type="Maestro\DesignPatterns\Service\Strategy\SorterList"/>
+    <type name="Maestro\DesignPatterns\Service\Strategy\SorterList">
+        <arguments>
+            <argument name="sortListStrategy" xsi:type="object">Maestro\DesignPatterns\Service\Strategy\BubbleSortStrategy</argument>
+        </arguments>
+    </type>
+    <!--/Strategy-->
 
 </config>
