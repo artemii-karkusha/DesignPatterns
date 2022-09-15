@@ -192,4 +192,10 @@
     </type>
     <!--/Observer-->
 
+    <!--State-->
+    <preference for="Maestro\DesignPatterns\Api\State\Model\OvenInterface"
+                type="Maestro\DesignPatterns\Model\State\Oven"/>
+    <!--/State-->
+    //OvenInterface
+
 </config>
