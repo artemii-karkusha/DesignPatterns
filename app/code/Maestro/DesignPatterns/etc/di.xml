@@ -5,6 +5,8 @@
   -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <!--Factory | AbstractFactory-->
     <preference for="Maestro\DesignPatterns\Api\FactoryMethod\FoodFactoryMethodInterface"
                 type="Maestro\DesignPatterns\Service\FactoryMethod\FoodFactoryMethod"/>
 
@@ -23,10 +25,14 @@
             </argument>
         </arguments>
     </type>
+    <!--/Factory | AbstractFactory-->
 
-
+    <!--Prototype-->
     <preference for="Maestro\DesignPatterns\Api\Prototype\CarInterface"
                 type="Maestro\DesignPatterns\Model\Prototype\Car"/>
+    <!--Prototype-->
+
+    <!--Builder-->
     <preference for="Maestro\DesignPatterns\Api\Builder\PizzaIngredientFactoryMethodInterface"
                 type="Maestro\DesignPatterns\Service\Builder\PizzaIngredientFactoryMethod"/>
     <preference for="Maestro\DesignPatterns\Api\Builder\PizzaBuilderInterface"
@@ -58,11 +64,14 @@
                 type="Maestro\DesignPatterns\Model\Builder\Pizza"/>
     <preference for="Maestro\DesignPatterns\Api\Adapter\NovaPoshtaAdapterInterface"
                 type="Maestro\DesignPatterns\Service\Adapter\NovaPoshtaAdapter"/>
+    <!--/Builder-->
 
+    <!--Composite-->
     <preference for="Maestro\DesignPatterns\Api\CompositeForParcels\Service\ParcelManagementInterface"
                 type="Maestro\DesignPatterns\Service\CompositeForParcels\ParcelManagement"/>
     <preference for="Maestro\DesignPatterns\Api\Facade\CalculatorFacadeInterface"
                 type="Maestro\DesignPatterns\Service\Proxy\CalculatorFacadeWithCaching"/>
+    <!--/Composite-->
 
     <!--Proxy-->
     <type name="Maestro\DesignPatterns\Service\Proxy\CalculatorFacadeWithCaching">
@@ -206,5 +215,14 @@
         </arguments>
     </type>
     <!--/Strategy-->
+
+    <!--Template Method-->
+    <type name="Maestro\DesignPatterns\Controller\Test\TemplateMethod">
+        <arguments>
+            <argument name="dateFileWriter" xsi:type="object">Maestro\DesignPatterns\Service\TemplateMethod\DateFileWriter</argument>
+            <argument name="timeFileWriter" xsi:type="object">Maestro\DesignPatterns\Service\TemplateMethod\TimeFileWriter</argument>
+        </arguments>
+    </type>
+    <!--/Template Method-->
 
 </config>
