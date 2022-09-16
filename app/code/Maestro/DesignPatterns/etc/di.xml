@@ -225,4 +225,12 @@
     </type>
     <!--/Template Method-->
 
+    <!--Visitor-->
+    <type name="Maestro\DesignPatterns\Controller\Test\Visitor">
+        <arguments>
+            <argument name="visitorPizzaMaker" xsi:type="object">Maestro\DesignPatterns\Service\Visitor\PizzaMaker</argument>
+        </arguments>
+    </type>
+    <!--/Visitor-->
+
 </config>
