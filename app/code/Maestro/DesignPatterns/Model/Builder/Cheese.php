@@ -8,7 +8,19 @@ declare(strict_types=1);
 
 namespace Maestro\DesignPatterns\Model\Builder;
 
-class Cheese extends Ingredient
+use Maestro\DesignPatterns\Api\Visitor\PizzaVisitorIngredientInterface;
+use Maestro\DesignPatterns\Api\Visitor\VisitorInterface;
+
+class Cheese extends Ingredient implements PizzaVisitorIngredientInterface
 {
     public const INGREDIENT_NAME = 'cheese';
+
+    /**
+     * @param VisitorInterface $visitor
+     * @return string
+     */
+    public function accept(VisitorInterface $visitor): string
+    {
+        return $visitor->visitCheese($this);
+    }
 }
