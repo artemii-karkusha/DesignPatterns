@@ -6,12 +6,12 @@
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Controller\Test;
+namespace ArtemiiKarkusha\DesignPatterns\Controller\Test;
 
-use Maestro\DesignPatterns\Service\TemplateMethod\AbstractFileWriter;
+use ArtemiiKarkusha\DesignPatterns\Service\TemplateMethod\AbstractFileWriter;
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\ResultFactory;
-use Maestro\DesignPatterns\Api\TemplateMethod\FileWriterInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\TemplateMethod\FileWriterInterface;
 
 class TemplateMethod implements HttpGetActionInterface
 {

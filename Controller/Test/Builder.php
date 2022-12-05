@@ -6,20 +6,20 @@
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Controller\Test;
+namespace ArtemiiKarkusha\DesignPatterns\Controller\Test;
 
 use InvalidArgumentException;
-use Maestro\DesignPatterns\Api\Builder\PizzaInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Builder\PizzaInterface;
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\App\ResponseInterface;
 use Magento\Framework\Controller\ResultInterface;
 use Magento\Framework\Exception\NotFoundException;
 use Magento\Framework\Controller\ResultFactory;
-use Maestro\DesignPatterns\Api\Builder\PizzaBuilderInterface;
-use Maestro\DesignPatterns\Model\Builder\Cheese;
-use Maestro\DesignPatterns\Model\Builder\Bacon;
-use Maestro\DesignPatterns\Model\Builder\Pineapples;
-use Maestro\DesignPatterns\Model\Builder\Mushrooms;
+use ArtemiiKarkusha\DesignPatterns\Api\Builder\PizzaBuilderInterface;
+use ArtemiiKarkusha\DesignPatterns\Model\Builder\Cheese;
+use ArtemiiKarkusha\DesignPatterns\Model\Builder\Bacon;
+use ArtemiiKarkusha\DesignPatterns\Model\Builder\Pineapples;
+use ArtemiiKarkusha\DesignPatterns\Model\Builder\Mushrooms;
 
 /**
  * Controller for test Builder functionality

@@ -6,10 +6,10 @@
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Service\Prototype;
+namespace ArtemiiKarkusha\DesignPatterns\Service\Prototype;
 
-use Maestro\DesignPatterns\Api\Prototype\CarInterface;
-use Maestro\DesignPatterns\Api\Prototype\CarInterfaceFactory;
+use ArtemiiKarkusha\DesignPatterns\Api\Prototype\CarInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Prototype\CarInterfaceFactory;
 
 class CarPrototype
 {

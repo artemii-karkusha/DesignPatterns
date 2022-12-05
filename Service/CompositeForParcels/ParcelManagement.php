@@ -6,13 +6,13 @@
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Service\CompositeForParcels;
+namespace ArtemiiKarkusha\DesignPatterns\Service\CompositeForParcels;
 
-use Maestro\DesignPatterns\Api\CompositeForParcels\Model\ContainerOfParcelInterface;
-use Maestro\DesignPatterns\Api\CompositeForParcels\Model\ContainerTypesInterface;
-use Maestro\DesignPatterns\Api\CompositeForParcels\Service\ParcelManagementInterface;
-use Maestro\DesignPatterns\Model\CompositeForParcels\BoxFactory;
-use Maestro\DesignPatterns\Model\CompositeForParcels\ParcelItemFactory;
+use ArtemiiKarkusha\DesignPatterns\Api\CompositeForParcels\Model\ContainerOfParcelInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\CompositeForParcels\Model\ContainerTypesInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\CompositeForParcels\Service\ParcelManagementInterface;
+use ArtemiiKarkusha\DesignPatterns\Model\CompositeForParcels\BoxFactory;
+use ArtemiiKarkusha\DesignPatterns\Model\CompositeForParcels\ParcelItemFactory;
 use Magento\Framework\Exception\NoSuchEntityException;
 
 class ParcelManagement implements ParcelManagementInterface

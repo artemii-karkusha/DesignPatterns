@@ -6,13 +6,13 @@
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Controller\Test;
+namespace ArtemiiKarkusha\DesignPatterns\Controller\Test;
 
-use Maestro\DesignPatterns\Api\Memento\Model\TextAreaInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Memento\Model\TextAreaInterface;
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\ResultFactory;
-use Maestro\DesignPatterns\Api\Memento\Model\TextAreaInterfaceFactory;
-use Maestro\DesignPatterns\Api\Memento\CaretakerInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Memento\Model\TextAreaInterfaceFactory;
+use ArtemiiKarkusha\DesignPatterns\Api\Memento\CaretakerInterface;
 use Magento\Framework\Exception\NotFoundException;
 
 class Memento implements HttpGetActionInterface

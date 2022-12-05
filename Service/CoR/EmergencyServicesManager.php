@@ -1,16 +1,16 @@
 <?php
 /**
  * @author Artemii Karkusha
- * @copyright Copyright (c)
+ * @copyright Copyright (c) (https://www.linkedin.com/in/artemiy-karkusha/)
  */
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Service\CoR;
+namespace ArtemiiKarkusha\DesignPatterns\Service\CoR;
 
-use Maestro\DesignPatterns\Api\CoR\Service\EmergencyServicesManagerInterface;
-use Maestro\DesignPatterns\Api\CoR\Model\PhoneInterface;
-use Maestro\DesignPatterns\Api\CoR\Service\EmergencyServiceCallerInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\CoR\Service\EmergencyServicesManagerInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\CoR\Model\PhoneInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\CoR\Service\EmergencyServiceCallerInterface;
 
 class EmergencyServicesManager implements EmergencyServicesManagerInterface
 {

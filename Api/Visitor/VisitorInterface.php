@@ -1,16 +1,16 @@
 <?php
 /**
  * @author Artemii Karkusha
- * @copyright Copyright (c)
+ * @copyright Copyright (c) (https://www.linkedin.com/in/artemiy-karkusha/)
  */
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Api\Visitor;
+namespace ArtemiiKarkusha\DesignPatterns\Api\Visitor;
 
-use Maestro\DesignPatterns\Model\Builder\Bacon;
-use Maestro\DesignPatterns\Model\Builder\Cheese;
-use Maestro\DesignPatterns\Model\Builder\Pineapples;
+use ArtemiiKarkusha\DesignPatterns\Model\Builder\Bacon;
+use ArtemiiKarkusha\DesignPatterns\Model\Builder\Cheese;
+use ArtemiiKarkusha\DesignPatterns\Model\Builder\Pineapples;
 
 interface VisitorInterface
 {

@@ -1,14 +1,14 @@
 <?php
 /**
  * @author Artemii Karkusha
- * @copyright Copyright (c)
+ * @copyright Copyright (c) (https://www.linkedin.com/in/artemiy-karkusha/)
  */
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Api\CompositeForParcels\Service;
+namespace ArtemiiKarkusha\DesignPatterns\Api\CompositeForParcels\Service;
 
-use Maestro\DesignPatterns\Api\CompositeForParcels\Model\ContainerOfParcelInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\CompositeForParcels\Model\ContainerOfParcelInterface;
 use Magento\Framework\Exception\NoSuchEntityException;
 
 interface ParcelManagementInterface

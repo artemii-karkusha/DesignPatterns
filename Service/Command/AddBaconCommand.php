@@ -1,16 +1,16 @@
 <?php
 /**
  * @author Artemii Karkusha
- * @copyright Copyright (c)
+ * @copyright Copyright (c) (https://www.linkedin.com/in/artemiy-karkusha/)
  */
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Service\Command;
+namespace ArtemiiKarkusha\DesignPatterns\Service\Command;
 
-use Maestro\DesignPatterns\Api\Command\Service\AddIngredientCommandInterface;
-use Maestro\DesignPatterns\Api\Builder\PizzaInterface;
-use Maestro\DesignPatterns\Model\Builder\BaconFactory;
+use ArtemiiKarkusha\DesignPatterns\Api\Command\Service\AddIngredientCommandInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Builder\PizzaInterface;
+use ArtemiiKarkusha\DesignPatterns\Model\Builder\BaconFactory;
 
 class AddBaconCommand implements AddIngredientCommandInterface
 {

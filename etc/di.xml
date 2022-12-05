@@ -1,26 +1,26 @@
 <?xml version="1.0"?>
 <!--
   ~ @author Artemii Karkusha
-  ~ @copyright Copyright (c) Artemii Karkusha
+  ~ @copyright Copyright (c) (https://www.linkedin.com/in/artemiy-karkusha/)
   -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
 
     <!--Factory | AbstractFactory-->
-    <preference for="Maestro\DesignPatterns\Api\FactoryMethod\FoodFactoryMethodInterface"
-                type="Maestro\DesignPatterns\Service\FactoryMethod\FoodFactoryMethod"/>
+    <preference for="ArtemiiKarkusha\DesignPatterns\Api\FactoryMethod\FoodFactoryMethodInterface"
+                type="ArtemiiKarkusha\DesignPatterns\Service\FactoryMethod\FoodFactoryMethod"/>
 
-    <type name="Maestro\DesignPatterns\Service\AbstractFactory\KitchenAbstractFactory">
+    <type name="ArtemiiKarkusha\DesignPatterns\Service\AbstractFactory\KitchenAbstractFactory">
         <arguments>
             <argument name="foodsFactoryForKitchens" xsi:type="array">
                 <item name="americanFoodFactory"
-                      xsi:type="object">Maestro\DesignPatterns\Service\AbstractFactory\AmericanFoodFactoryMethod
+                      xsi:type="object">ArtemiiKarkusha\DesignPatterns\Service\AbstractFactory\AmericanFoodFactoryMethod
                 </item>
                 <item name="ukrainianFoodFactory"
-                      xsi:type="object">Maestro\DesignPatterns\Service\AbstractFactory\UkrainianFoodFactoryMethod
+                      xsi:type="object">ArtemiiKarkusha\DesignPatterns\Service\AbstractFactory\UkrainianFoodFactoryMethod
                 </item>
                 <item name="japaneseFoodFactory"
-                      xsi:type="object">Maestro\DesignPatterns\Service\AbstractFactory\JapaneseFoodFactoryMethod
+                      xsi:type="object">ArtemiiKarkusha\DesignPatterns\Service\AbstractFactory\JapaneseFoodFactoryMethod
                 </item>
             </argument>
         </arguments>
@@ -28,70 +28,70 @@
     <!--/Factory | AbstractFactory-->
 
     <!--Prototype-->
-    <preference for="Maestro\DesignPatterns\Api\Prototype\CarInterface"
-                type="Maestro\DesignPatterns\Model\Prototype\Car"/>
+    <preference for="ArtemiiKarkusha\DesignPatterns\Api\Prototype\CarInterface"
+                type="ArtemiiKarkusha\DesignPatterns\Model\Prototype\Car"/>
     <!--Prototype-->
 
     <!--Builder-->
-    <preference for="Maestro\DesignPatterns\Api\Builder\PizzaIngredientFactoryMethodInterface"
-                type="Maestro\DesignPatterns\Service\Builder\PizzaIngredientFactoryMethod"/>
-    <preference for="Maestro\DesignPatterns\Api\Builder\PizzaBuilderInterface"
-                type="Maestro\DesignPatterns\Service\Builder\PizzaBuilder"/>
+    <preference for="ArtemiiKarkusha\DesignPatterns\Api\Builder\PizzaIngredientFactoryMethodInterface"
+                type="ArtemiiKarkusha\DesignPatterns\Service\Builder\PizzaIngredientFactoryMethod"/>
+    <preference for="ArtemiiKarkusha\DesignPatterns\Api\Builder\PizzaBuilderInterface"
+                type="ArtemiiKarkusha\DesignPatterns\Service\Builder\PizzaBuilder"/>
 
-    <type name="Maestro\DesignPatterns\Service\Builder\PizzaIngredientFactoryMethod">
+    <type name="ArtemiiKarkusha\DesignPatterns\Service\Builder\PizzaIngredientFactoryMethod">
         <arguments>
             <argument name="pizzaIngredients" xsi:type="array">
                 <item name="cheese"
-                      xsi:type="string">Maestro\DesignPatterns\Model\Builder\Cheese
+                      xsi:type="string">ArtemiiKarkusha\DesignPatterns\Model\Builder\Cheese
                 </item>
                 <item name="bacon"
-                      xsi:type="string">Maestro\DesignPatterns\Model\Builder\Bacon
+                      xsi:type="string">ArtemiiKarkusha\DesignPatterns\Model\Builder\Bacon
                 </item>
                 <item name="mushrooms"
-                      xsi:type="string">Maestro\DesignPatterns\Model\Builder\Mushrooms
+                      xsi:type="string">ArtemiiKarkusha\DesignPatterns\Model\Builder\Mushrooms
                 </item>
                 <item name="pineapples"
-                      xsi:type="string">Maestro\DesignPatterns\Model\Builder\Pineapples
+                      xsi:type="string">ArtemiiKarkusha\DesignPatterns\Model\Builder\Pineapples
                 </item>
                 <item name="seafood.php"
-                      xsi:type="string">Maestro\DesignPatterns\Model\Builder\Seafood
+                      xsi:type="string">ArtemiiKarkusha\DesignPatterns\Model\Builder\Seafood
                 </item>
             </argument>
         </arguments>
     </type>
 
-    <preference for="Maestro\DesignPatterns\Api\Builder\PizzaInterface"
-                type="Maestro\DesignPatterns\Model\Builder\Pizza"/>
-    <preference for="Maestro\DesignPatterns\Api\Adapter\NovaPoshtaAdapterInterface"
-                type="Maestro\DesignPatterns\Service\Adapter\NovaPoshtaAdapter"/>
+    <preference for="ArtemiiKarkusha\DesignPatterns\Api\Builder\PizzaInterface"
+                type="ArtemiiKarkusha\DesignPatterns\Model\Builder\Pizza"/>
+    <preference for="ArtemiiKarkusha\DesignPatterns\Api\Adapter\NovaPoshtaAdapterInterface"
+                type="ArtemiiKarkusha\DesignPatterns\Service\Adapter\NovaPoshtaAdapter"/>
     <!--/Builder-->
 
     <!--Composite-->
-    <preference for="Maestro\DesignPatterns\Api\CompositeForParcels\Service\ParcelManagementInterface"
-                type="Maestro\DesignPatterns\Service\CompositeForParcels\ParcelManagement"/>
-    <preference for="Maestro\DesignPatterns\Api\Facade\CalculatorFacadeInterface"
-                type="Maestro\DesignPatterns\Service\Proxy\CalculatorFacadeWithCaching"/>
+    <preference for="ArtemiiKarkusha\DesignPatterns\Api\CompositeForParcels\Service\ParcelManagementInterface"
+                type="ArtemiiKarkusha\DesignPatterns\Service\CompositeForParcels\ParcelManagement"/>
+    <preference for="ArtemiiKarkusha\DesignPatterns\Api\Facade\CalculatorFacadeInterface"
+                type="ArtemiiKarkusha\DesignPatterns\Service\Proxy\CalculatorFacadeWithCaching"/>
     <!--/Composite-->
 
     <!--Proxy-->
-    <type name="Maestro\DesignPatterns\Service\Proxy\CalculatorFacadeWithCaching">
+    <type name="ArtemiiKarkusha\DesignPatterns\Service\Proxy\CalculatorFacadeWithCaching">
         <arguments>
             <argument name="calculatorFacade"
-                xsi:type="object">Maestro\DesignPatterns\Service\Facade\CalculatorFacade</argument>
+                xsi:type="object">ArtemiiKarkusha\DesignPatterns\Service\Facade\CalculatorFacade</argument>
         </arguments>
     </type>
     <!--/Proxy-->
 
     <!--CoR-->
-    <preference for="Maestro\DesignPatterns\Api\CoR\Model\PhoneInterface" type="Maestro\DesignPatterns\Model\CoR\Phone"/>
-    <preference for="Maestro\DesignPatterns\Api\CoR\Service\EmergencyServicesManagerInterface"
-                type="Maestro\DesignPatterns\Service\CoR\EmergencyServicesManager"/>
-    <type name="Maestro\DesignPatterns\Service\CoR\EmergencyServicesManager">
+    <preference for="ArtemiiKarkusha\DesignPatterns\Api\CoR\Model\PhoneInterface" type="ArtemiiKarkusha\DesignPatterns\Model\CoR\Phone"/>
+    <preference for="ArtemiiKarkusha\DesignPatterns\Api\CoR\Service\EmergencyServicesManagerInterface"
+                type="ArtemiiKarkusha\DesignPatterns\Service\CoR\EmergencyServicesManager"/>
+    <type name="ArtemiiKarkusha\DesignPatterns\Service\CoR\EmergencyServicesManager">
         <arguments>
             <argument name="emergencyServicesCallers" xsi:type="array">
-                <item name="0" xsi:type="object">Maestro\DesignPatterns\Service\CoR\FireDepartmentCallerService</item>
-                <item name="1" xsi:type="object">Maestro\DesignPatterns\Service\CoR\PoliceDepartmentCallerService</item>
-                <item name="2" xsi:type="object">Maestro\DesignPatterns\Service\CoR\MedicalServiceCaller</item>
+                <item name="0" xsi:type="object">ArtemiiKarkusha\DesignPatterns\Service\CoR\FireDepartmentCallerService</item>
+                <item name="1" xsi:type="object">ArtemiiKarkusha\DesignPatterns\Service\CoR\PoliceDepartmentCallerService</item>
+                <item name="2" xsi:type="object">ArtemiiKarkusha\DesignPatterns\Service\CoR\MedicalServiceCaller</item>
             </argument>
         </arguments>
     </type>
@@ -99,14 +99,14 @@
 
 
     <!--Command-->
-    <preference for="Maestro\DesignPatterns\Api\Command\Service\PizzaCookerInterface"
-                type="Maestro\DesignPatterns\Service\Command\PizzaCooker"/>
+    <preference for="ArtemiiKarkusha\DesignPatterns\Api\Command\Service\PizzaCookerInterface"
+                type="ArtemiiKarkusha\DesignPatterns\Service\Command\PizzaCooker"/>
 
-    <type name="Maestro\DesignPatterns\Service\Command\PizzaCooker">
+    <type name="ArtemiiKarkusha\DesignPatterns\Service\Command\PizzaCooker">
         <arguments>
             <argument name="pizzaCommandsFactoryList" xsi:type="array">
-                <item name="bacon" xsi:type="object">Maestro\DesignPatterns\Service\Command\AddBaconCommandFactory</item>
-                <item name="cheese" xsi:type="object">Maestro\DesignPatterns\Service\Command\AddCheeseCommandFactory</item>
+                <item name="bacon" xsi:type="object">ArtemiiKarkusha\DesignPatterns\Service\Command\AddBaconCommandFactory</item>
+                <item name="cheese" xsi:type="object">ArtemiiKarkusha\DesignPatterns\Service\Command\AddCheeseCommandFactory</item>
             </argument>
         </arguments>
     </type>
@@ -114,13 +114,13 @@
 
 
     <!--Interpreter-->
-    <preference for="Maestro\DesignPatterns\Api\Interpreter\PizzaRecipeInterpreterInterface"
-                type="Maestro\DesignPatterns\Service\Interpreter\PizzaRecipeInterpreter"/>
-    <type name="Maestro\DesignPatterns\Service\Interpreter\PizzaRecipeInterpreter">
+    <preference for="ArtemiiKarkusha\DesignPatterns\Api\Interpreter\PizzaRecipeInterpreterInterface"
+                type="ArtemiiKarkusha\DesignPatterns\Service\Interpreter\PizzaRecipeInterpreter"/>
+    <type name="ArtemiiKarkusha\DesignPatterns\Service\Interpreter\PizzaRecipeInterpreter">
         <arguments>
             <argument name="pizzaExpressionsList" xsi:type="array">
                 <item name="addIngredientsExpression"
-                      xsi:type="object">Maestro\DesignPatterns\Service\Interpreter\AddIngredientExpression</item>
+                      xsi:type="object">ArtemiiKarkusha\DesignPatterns\Service\Interpreter\AddIngredientExpression</item>
             </argument>
         </arguments>
     </type>
@@ -128,107 +128,107 @@
 
 
     <!--Iterator-->
-    <preference for="Maestro\DesignPatterns\Api\Iterator\Model\BookInterface"
-                type="Maestro\DesignPatterns\Model\Iterator\Book"/>
-    <type name="Maestro\DesignPatterns\Service\Iterator\IteratorFactoryMethod">
+    <preference for="ArtemiiKarkusha\DesignPatterns\Api\Iterator\Model\BookInterface"
+                type="ArtemiiKarkusha\DesignPatterns\Model\Iterator\Book"/>
+    <type name="ArtemiiKarkusha\DesignPatterns\Service\Iterator\IteratorFactoryMethod">
         <arguments>
             <argument name="factoriesIterators" xsi:type="array">
                 <item name="books_iterator"
-                      xsi:type="object">Maestro\DesignPatterns\Service\Iterator\BooksIteratorFactory</item>
+                      xsi:type="object">ArtemiiKarkusha\DesignPatterns\Service\Iterator\BooksIteratorFactory</item>
                 <item name="books_sorted_by_author_name_iterator"
-                      xsi:type="object">Maestro\DesignPatterns\Service\Iterator\BooksSortedByAuthorNameIteratorFactory</item>
+                      xsi:type="object">ArtemiiKarkusha\DesignPatterns\Service\Iterator\BooksSortedByAuthorNameIteratorFactory</item>
                 <item name="books_sorted_by_book_name_iterator"
-                      xsi:type="object">Maestro\DesignPatterns\Service\Iterator\BooksSortedByBookNameIteratorFactory</item>
+                      xsi:type="object">ArtemiiKarkusha\DesignPatterns\Service\Iterator\BooksSortedByBookNameIteratorFactory</item>
             </argument>
         </arguments>
     </type>
     <!--/Iterator-->
 
     <!--Mediator-->
-    <preference for="Maestro\DesignPatterns\Api\Mediator\ConciergeServiceInterface"
-                type="Maestro\DesignPatterns\Service\Mediator\ConciergeServiceManager"/>
-    <preference for="Maestro\DesignPatterns\Api\Mediator\NotificationMediatorInterface"
-                type="Maestro\DesignPatterns\Service\Mediator\NotificationMediatorManager"/>
-    <type name="Maestro\DesignPatterns\Service\Mediator\ConciergeServiceManager">
+    <preference for="ArtemiiKarkusha\DesignPatterns\Api\Mediator\ConciergeServiceInterface"
+                type="ArtemiiKarkusha\DesignPatterns\Service\Mediator\ConciergeServiceManager"/>
+    <preference for="ArtemiiKarkusha\DesignPatterns\Api\Mediator\NotificationMediatorInterface"
+                type="ArtemiiKarkusha\DesignPatterns\Service\Mediator\NotificationMediatorManager"/>
+    <type name="ArtemiiKarkusha\DesignPatterns\Service\Mediator\ConciergeServiceManager">
         <arguments>
             <argument name="conciergeServices" xsi:type="array">
                 <item name="CallATaxi"
-                      xsi:type="object">Maestro\DesignPatterns\Service\Mediator\ConciergeCallATaxiService</item>
+                      xsi:type="object">ArtemiiKarkusha\DesignPatterns\Service\Mediator\ConciergeCallATaxiService</item>
                 <item name="CallAMaster"
-                      xsi:type="object">Maestro\DesignPatterns\Service\Mediator\ConciergeCallAMasterService</item>
+                      xsi:type="object">ArtemiiKarkusha\DesignPatterns\Service\Mediator\ConciergeCallAMasterService</item>
                 <item name="DeliveryAFlower"
-                      xsi:type="object">Maestro\DesignPatterns\Service\Mediator\ConciergeDeliveryAFlowerService</item>
+                      xsi:type="object">ArtemiiKarkusha\DesignPatterns\Service\Mediator\ConciergeDeliveryAFlowerService</item>
             </argument>
         </arguments>
     </type>
-    <type name="Maestro\DesignPatterns\Service\Mediator\NotificationMediatorManager">
+    <type name="ArtemiiKarkusha\DesignPatterns\Service\Mediator\NotificationMediatorManager">
         <arguments>
             <argument name="notifyMediators" xsi:type="array">
                 <item name="CallATaxi"
-                      xsi:type="object">Maestro\DesignPatterns\Service\Mediator\NotificationMediatorAboutCallATaxi</item>
+                      xsi:type="object">ArtemiiKarkusha\DesignPatterns\Service\Mediator\NotificationMediatorAboutCallATaxi</item>
                 <item name="CallAMaster"
-                      xsi:type="object">Maestro\DesignPatterns\Service\Mediator\NotificationMediatorAboutCallAMaster</item>
+                      xsi:type="object">ArtemiiKarkusha\DesignPatterns\Service\Mediator\NotificationMediatorAboutCallAMaster</item>
             </argument>
         </arguments>
     </type>
     <!--/Mediator-->
 
     <!--Memento-->
-    <preference for="Maestro\DesignPatterns\Api\Memento\Model\TextAreaInterface"
-                type="Maestro\DesignPatterns\Model\Memento\TextArea"/>
-    <preference for="Maestro\DesignPatterns\Api\Memento\Model\MementoInterface"
-                type="Maestro\DesignPatterns\Model\Memento\ConcreteMemento"/>
-    <preference for="Maestro\DesignPatterns\Api\Memento\CaretakerInterface"
-                type="Maestro\DesignPatterns\Service\Memento\Caretaker"/>
+    <preference for="ArtemiiKarkusha\DesignPatterns\Api\Memento\Model\TextAreaInterface"
+                type="ArtemiiKarkusha\DesignPatterns\Model\Memento\TextArea"/>
+    <preference for="ArtemiiKarkusha\DesignPatterns\Api\Memento\Model\MementoInterface"
+                type="ArtemiiKarkusha\DesignPatterns\Model\Memento\ConcreteMemento"/>
+    <preference for="ArtemiiKarkusha\DesignPatterns\Api\Memento\CaretakerInterface"
+                type="ArtemiiKarkusha\DesignPatterns\Service\Memento\Caretaker"/>
     <!--/Memento-->
 
     <!--Observer-->
-    <preference for="Maestro\DesignPatterns\Api\Observer\Model\StormInterface"
-                type="Maestro\DesignPatterns\Model\Observer\Storm"/>
-    <preference for="Maestro\DesignPatterns\Api\Observer\WeatherNotifierInterface"
-                type="Maestro\DesignPatterns\Service\Observer\StormNotifier"/>
-    <preference for="Maestro\DesignPatterns\Api\Observer\WeatherServiceInterface"
-                type="Maestro\DesignPatterns\Service\Observer\WeatherService"/>
-    <type name="Maestro\DesignPatterns\Service\Observer\StormNotifier">
+    <preference for="ArtemiiKarkusha\DesignPatterns\Api\Observer\Model\StormInterface"
+                type="ArtemiiKarkusha\DesignPatterns\Model\Observer\Storm"/>
+    <preference for="ArtemiiKarkusha\DesignPatterns\Api\Observer\WeatherNotifierInterface"
+                type="ArtemiiKarkusha\DesignPatterns\Service\Observer\StormNotifier"/>
+    <preference for="ArtemiiKarkusha\DesignPatterns\Api\Observer\WeatherServiceInterface"
+                type="ArtemiiKarkusha\DesignPatterns\Service\Observer\WeatherService"/>
+    <type name="ArtemiiKarkusha\DesignPatterns\Service\Observer\StormNotifier">
         <arguments>
             <argument name="weatherObservers" xsi:type="array">
                 <item name="AirportWeatherObserver"
-                      xsi:type="object">Maestro\DesignPatterns\Service\Observer\AirportWeatherObserver</item>
+                      xsi:type="object">ArtemiiKarkusha\DesignPatterns\Service\Observer\AirportWeatherObserver</item>
                 <item name="SchoolWeatherObserver"
-                      xsi:type="object">Maestro\DesignPatterns\Service\Observer\SchoolWeatherObserver</item>
+                      xsi:type="object">ArtemiiKarkusha\DesignPatterns\Service\Observer\SchoolWeatherObserver</item>
             </argument>
         </arguments>
     </type>
     <!--/Observer-->
 
     <!--State-->
-    <preference for="Maestro\DesignPatterns\Api\State\Model\OvenInterface"
-                type="Maestro\DesignPatterns\Model\State\Oven"/>
+    <preference for="ArtemiiKarkusha\DesignPatterns\Api\State\Model\OvenInterface"
+                type="ArtemiiKarkusha\DesignPatterns\Model\State\Oven"/>
     <!--/State-->
 
     <!--Strategy-->
-    <preference for="Maestro\DesignPatterns\Api\Strategy\SorterListInterface"
-                type="Maestro\DesignPatterns\Service\Strategy\SorterList"/>
-    <type name="Maestro\DesignPatterns\Service\Strategy\SorterList">
+    <preference for="ArtemiiKarkusha\DesignPatterns\Api\Strategy\SorterListInterface"
+                type="ArtemiiKarkusha\DesignPatterns\Service\Strategy\SorterList"/>
+    <type name="ArtemiiKarkusha\DesignPatterns\Service\Strategy\SorterList">
         <arguments>
-            <argument name="sortListStrategy" xsi:type="object">Maestro\DesignPatterns\Service\Strategy\BubbleSortStrategy</argument>
+            <argument name="sortListStrategy" xsi:type="object">ArtemiiKarkusha\DesignPatterns\Service\Strategy\BubbleSortStrategy</argument>
         </arguments>
     </type>
     <!--/Strategy-->
 
     <!--Template Method-->
-    <type name="Maestro\DesignPatterns\Controller\Test\TemplateMethod">
+    <type name="ArtemiiKarkusha\DesignPatterns\Controller\Test\TemplateMethod">
         <arguments>
-            <argument name="dateFileWriter" xsi:type="object">Maestro\DesignPatterns\Service\TemplateMethod\DateFileWriter</argument>
-            <argument name="timeFileWriter" xsi:type="object">Maestro\DesignPatterns\Service\TemplateMethod\TimeFileWriter</argument>
+            <argument name="dateFileWriter" xsi:type="object">ArtemiiKarkusha\DesignPatterns\Service\TemplateMethod\DateFileWriter</argument>
+            <argument name="timeFileWriter" xsi:type="object">ArtemiiKarkusha\DesignPatterns\Service\TemplateMethod\TimeFileWriter</argument>
         </arguments>
     </type>
     <!--/Template Method-->
 
     <!--Visitor-->
-    <type name="Maestro\DesignPatterns\Controller\Test\Visitor">
+    <type name="ArtemiiKarkusha\DesignPatterns\Controller\Test\Visitor">
         <arguments>
-            <argument name="visitorPizzaMaker" xsi:type="object">Maestro\DesignPatterns\Service\Visitor\PizzaMaker</argument>
+            <argument name="visitorPizzaMaker" xsi:type="object">ArtemiiKarkusha\DesignPatterns\Service\Visitor\PizzaMaker</argument>
         </arguments>
     </type>
     <!--/Visitor-->

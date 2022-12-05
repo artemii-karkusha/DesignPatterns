@@ -1,17 +1,17 @@
 <?php
 /**
  * @author Artemii Karkusha
- * @copyright Copyright (c)
+ * @copyright Copyright (c) (https://www.linkedin.com/in/artemiy-karkusha/)
  */
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Service\Memento;
+namespace ArtemiiKarkusha\DesignPatterns\Service\Memento;
 
-use Maestro\DesignPatterns\Api\Memento\CaretakerInterface;
-use Maestro\DesignPatterns\Api\Memento\Model\ItCanSaveAndRestoreState;
-use Maestro\DesignPatterns\Api\Memento\Model\MementoInterface;
-use Magento\Framework\Exception\NotFoundException;
+use ArtemiiKarkusha\DesignPatterns\Api\Memento\CaretakerInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Memento\Model\ItCanSaveAndRestoreState;
+use ArtemiiKarkusha\DesignPatterns\Api\Memento\Model\MementoInterface;
+use ArtemiiKarkusha\Framework\Exception\NotFoundException;
 
 class Caretaker implements CaretakerInterface
 {

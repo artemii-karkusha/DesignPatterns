@@ -6,11 +6,11 @@
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Controller\Test;
+namespace ArtemiiKarkusha\DesignPatterns\Controller\Test;
 
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\ResultFactory;
-use Maestro\DesignPatterns\Api\Mediator\ConciergeServiceInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Mediator\ConciergeServiceInterface;
 use Magento\Framework\Exception\NotFoundException;
 
 class Mediator implements HttpGetActionInterface

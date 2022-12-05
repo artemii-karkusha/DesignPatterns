@@ -1,16 +1,16 @@
 <?php
 /**
  * @author Artemii Karkusha
- * @copyright Copyright (c) Artemii Karkusha
+ * @copyright Copyright (c) (https://www.linkedin.com/in/artemiy-karkusha/)
  */
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Service\AbstractFactory;
+namespace ArtemiiKarkusha\DesignPatterns\Service\AbstractFactory;
 
 use InvalidArgumentException;
-use Maestro\DesignPatterns\Api\AbstractFactory\FoodFactoryMethodForKitchenInterface;
-use Maestro\DesignPatterns\Api\FactoryMethod\FoodInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\AbstractFactory\FoodFactoryMethodForKitchenInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\FactoryMethod\FoodInterface;
 
 class KitchenAbstractFactory
 {

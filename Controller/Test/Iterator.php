@@ -6,15 +6,15 @@
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Controller\Test;
+namespace ArtemiiKarkusha\DesignPatterns\Controller\Test;
 
-use Maestro\DesignPatterns\Api\Iterator\Model\BookInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Iterator\Model\BookInterface;
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\ResultFactory;
-use Maestro\DesignPatterns\Model\Iterator\CollectionOfBooks;
-use Maestro\DesignPatterns\Service\Iterator\BooksSortedByAuthorNameIterator;
-use Maestro\DesignPatterns\Service\Iterator\BooksSortedByBookNameIterator;
-use Maestro\DesignPatterns\Api\Iterator\Model\BookInterfaceFactory;
+use ArtemiiKarkusha\DesignPatterns\Model\Iterator\CollectionOfBooks;
+use ArtemiiKarkusha\DesignPatterns\Service\Iterator\BooksSortedByAuthorNameIterator;
+use ArtemiiKarkusha\DesignPatterns\Service\Iterator\BooksSortedByBookNameIterator;
+use ArtemiiKarkusha\DesignPatterns\Api\Iterator\Model\BookInterfaceFactory;
 
 class Iterator implements HttpGetActionInterface
 {

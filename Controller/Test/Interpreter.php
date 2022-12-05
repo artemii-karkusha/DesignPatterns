@@ -6,10 +6,10 @@
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Controller\Test;
+namespace ArtemiiKarkusha\DesignPatterns\Controller\Test;
 
-use Maestro\DesignPatterns\Api\Builder\PizzaInterface;
-use Maestro\DesignPatterns\Api\Interpreter\PizzaRecipeInterpreterInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Builder\PizzaInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Interpreter\PizzaRecipeInterpreterInterface;
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\ResultFactory;
 

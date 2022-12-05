@@ -1,14 +1,14 @@
 <?php
 /**
  * @author Artemii Karkusha
- * @copyright Copyright (c)
+ * @copyright Copyright (c) (https://www.linkedin.com/in/artemiy-karkusha/)
  */
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Model\Composite;
+namespace ArtemiiKarkusha\DesignPatterns\Model\Composite;
 
-use Maestro\DesignPatterns\Api\Composite\ElementInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Composite\ElementInterface;
 
 class Leaf implements ElementInterface
 {

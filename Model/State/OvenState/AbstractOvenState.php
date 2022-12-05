@@ -6,10 +6,10 @@
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Model\State\OvenState;
+namespace ArtemiiKarkusha\DesignPatterns\Model\State\OvenState;
 
-use Maestro\DesignPatterns\Api\State\Model\OvenInterface;
-use Maestro\DesignPatterns\Api\State\Model\OvenState\OvenStateInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\State\Model\OvenInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\State\Model\OvenState\OvenStateInterface;
 
 abstract class AbstractOvenState implements OvenStateInterface
 {

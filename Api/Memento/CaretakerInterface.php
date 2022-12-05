@@ -1,14 +1,14 @@
 <?php
 /**
  * @author Artemii Karkusha
- * @copyright Copyright (c)
+ * @copyright Copyright (c) (https://www.linkedin.com/in/artemiy-karkusha/)
  */
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Api\Memento;
+namespace ArtemiiKarkusha\DesignPatterns\Api\Memento;
 
-use Maestro\DesignPatterns\Api\Memento\Model\ItCanSaveAndRestoreState;
+use ArtemiiKarkusha\DesignPatterns\Api\Memento\Model\ItCanSaveAndRestoreState;
 use Magento\Framework\Exception\NotFoundException;
 
 interface CaretakerInterface

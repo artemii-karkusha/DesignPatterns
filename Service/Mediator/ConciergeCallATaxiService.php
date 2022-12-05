@@ -6,9 +6,9 @@
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Service\Mediator;
+namespace ArtemiiKarkusha\DesignPatterns\Service\Mediator;
 
-use Maestro\DesignPatterns\Api\Mediator\ConciergeServiceInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Mediator\ConciergeServiceInterface;
 
 class ConciergeCallATaxiService implements ConciergeServiceInterface
 {

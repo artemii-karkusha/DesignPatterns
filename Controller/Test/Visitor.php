@@ -6,16 +6,16 @@
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Controller\Test;
+namespace ArtemiiKarkusha\DesignPatterns\Controller\Test;
 
-use Maestro\DesignPatterns\Api\Builder\PizzaInterface;
-use Maestro\DesignPatterns\Model\Builder\Bacon;
-use Maestro\DesignPatterns\Model\Builder\Cheese;
-use Maestro\DesignPatterns\Model\Builder\Pineapples;
+use ArtemiiKarkusha\DesignPatterns\Api\Builder\PizzaInterface;
+use ArtemiiKarkusha\DesignPatterns\Model\Builder\Bacon;
+use ArtemiiKarkusha\DesignPatterns\Model\Builder\Cheese;
+use ArtemiiKarkusha\DesignPatterns\Model\Builder\Pineapples;
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\ResultFactory;
-use Maestro\DesignPatterns\Api\Visitor\VisitorInterface;
-use Maestro\DesignPatterns\Api\Builder\PizzaBuilderInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Visitor\VisitorInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Builder\PizzaBuilderInterface;
 
 class Visitor implements HttpGetActionInterface
 {

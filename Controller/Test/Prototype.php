@@ -6,16 +6,16 @@
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Controller\Test;
+namespace ArtemiiKarkusha\DesignPatterns\Controller\Test;
 
 use InvalidArgumentException;
-use Maestro\DesignPatterns\Api\Prototype\CarInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Prototype\CarInterface;
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\App\ResponseInterface;
 use Magento\Framework\Controller\ResultInterface;
 use Magento\Framework\Exception\NotFoundException;
 use Magento\Framework\Controller\ResultFactory;
-use Maestro\DesignPatterns\Service\Prototype\CarPrototype;
+use ArtemiiKarkusha\DesignPatterns\Service\Prototype\CarPrototype;
 
 /**
  * Controller for test Prototype functionality

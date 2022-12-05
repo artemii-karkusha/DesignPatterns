@@ -1,14 +1,14 @@
 <?php
 /**
  * @author Artemii Karkusha
- * @copyright Copyright (c)
+ * @copyright Copyright (c) (https://www.linkedin.com/in/artemiy-karkusha/)
  */
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Service\Mediator;
+namespace ArtemiiKarkusha\DesignPatterns\Service\Mediator;
 
-use Maestro\DesignPatterns\Api\Mediator\NotificationMediatorInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Mediator\NotificationMediatorInterface;
 
 class NotificationMediatorAboutCallATaxi implements NotificationMediatorInterface
 {

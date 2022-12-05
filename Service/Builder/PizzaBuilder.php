@@ -1,16 +1,16 @@
 <?php
 /**
  * @author Artemii Karkusha
- * @copyright Copyright (c)
+ * @copyright Copyright (c) (https://www.linkedin.com/in/artemiy-karkusha/)
  */
 
-namespace Maestro\DesignPatterns\Service\Builder;
+namespace ArtemiiKarkusha\DesignPatterns\Service\Builder;
 
 use InvalidArgumentException;
-use Maestro\DesignPatterns\Api\Builder\PizzaBuilderInterface;
-use Maestro\DesignPatterns\Api\Builder\PizzaInterface;
-use Maestro\DesignPatterns\Api\Builder\PizzaIngredientFactoryMethodInterface;
-use Maestro\DesignPatterns\Api\Builder\PizzaInterfaceFactory;
+use ArtemiiKarkusha\DesignPatterns\Api\Builder\PizzaBuilderInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Builder\PizzaInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Builder\PizzaIngredientFactoryMethodInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Builder\PizzaInterfaceFactory;
 
 class PizzaBuilder implements PizzaBuilderInterface
 {

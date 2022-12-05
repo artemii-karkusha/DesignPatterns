@@ -6,17 +6,17 @@
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Controller\Test;
+namespace ArtemiiKarkusha\DesignPatterns\Controller\Test;
 
 
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\ResultFactory;
-use Maestro\DesignPatterns\Api\CoR\Service\EmergencyServicesManagerInterface;
-use Maestro\DesignPatterns\Api\CoR\Model\PhoneInterfaceFactory;
-use Maestro\DesignPatterns\Api\CoR\Model\PhoneInterface;
-use Maestro\DesignPatterns\Service\CoR\FireDepartmentCallerService;
-use Maestro\DesignPatterns\Service\CoR\MedicalServiceCaller;
-use Maestro\DesignPatterns\Service\CoR\PoliceDepartmentCallerService;
+use ArtemiiKarkusha\DesignPatterns\Api\CoR\Service\EmergencyServicesManagerInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\CoR\Model\PhoneInterfaceFactory;
+use ArtemiiKarkusha\DesignPatterns\Api\CoR\Model\PhoneInterface;
+use ArtemiiKarkusha\DesignPatterns\Service\CoR\FireDepartmentCallerService;
+use ArtemiiKarkusha\DesignPatterns\Service\CoR\MedicalServiceCaller;
+use ArtemiiKarkusha\DesignPatterns\Service\CoR\PoliceDepartmentCallerService;
 
 class CoR implements HttpGetActionInterface
 {

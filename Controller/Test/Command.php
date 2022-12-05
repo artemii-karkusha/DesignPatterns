@@ -6,12 +6,12 @@
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Controller\Test;
+namespace ArtemiiKarkusha\DesignPatterns\Controller\Test;
 
-use Maestro\DesignPatterns\Api\Builder\PizzaInterface;
-use Maestro\DesignPatterns\Api\Command\Service\PizzaCookerInterface;
-use Maestro\DesignPatterns\Model\Builder\Bacon;
-use Maestro\DesignPatterns\Model\Builder\Cheese;
+use ArtemiiKarkusha\DesignPatterns\Api\Builder\PizzaInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Command\Service\PizzaCookerInterface;
+use ArtemiiKarkusha\DesignPatterns\Model\Builder\Bacon;
+use ArtemiiKarkusha\DesignPatterns\Model\Builder\Cheese;
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Framework\Exception\NotFoundException;

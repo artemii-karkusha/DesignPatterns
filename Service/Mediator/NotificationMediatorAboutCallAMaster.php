@@ -6,9 +6,9 @@
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Service\Mediator;
+namespace ArtemiiKarkusha\DesignPatterns\Service\Mediator;
 
-use Maestro\DesignPatterns\Api\Mediator\NotificationMediatorInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Mediator\NotificationMediatorInterface;
 
 class NotificationMediatorAboutCallAMaster implements NotificationMediatorInterface
 {

@@ -1,14 +1,14 @@
 <?php
 /**
  * @author Artemii Karkusha
- * @copyright Copyright (c)
+ * @copyright Copyright (c) (https://www.linkedin.com/in/artemiy-karkusha/)
  */
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Model\Builder;
+namespace ArtemiiKarkusha\DesignPatterns\Model\Builder;
 
-abstract class Ingredient implements \Maestro\DesignPatterns\Api\Builder\IngredientForPizzaInterface
+abstract class Ingredient implements \ArtemiiKarkusha\DesignPatterns\Api\Builder\IngredientForPizzaInterface
 {
     public const INGREDIENT_NAME = '';
 

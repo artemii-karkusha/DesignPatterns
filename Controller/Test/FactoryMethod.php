@@ -6,17 +6,17 @@
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Controller\Test;
+namespace ArtemiiKarkusha\DesignPatterns\Controller\Test;
 
 use InvalidArgumentException;
-use Maestro\DesignPatterns\Model\FactoryMethod\Meat;
-use Maestro\DesignPatterns\Model\FactoryMethod\Potato;
+use ArtemiiKarkusha\DesignPatterns\Model\FactoryMethod\Meat;
+use ArtemiiKarkusha\DesignPatterns\Model\FactoryMethod\Potato;
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\App\ResponseInterface;
 use Magento\Framework\Controller\ResultInterface;
 use Magento\Framework\Exception\NotFoundException;
 use Magento\Framework\Controller\ResultFactory;
-use Maestro\DesignPatterns\Service\FactoryMethod\Bake;
+use ArtemiiKarkusha\DesignPatterns\Service\FactoryMethod\Bake;
 
 /**
  * Controller for test FactoryMethod functionality

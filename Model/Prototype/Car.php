@@ -1,14 +1,14 @@
 <?php
 /**
  * @author Artemii Karkusha
- * @copyright Copyright (c) Artemii Karkusha
+ * @copyright Copyright (c) (https://www.linkedin.com/in/artemiy-karkusha/)
  */
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Model\Prototype;
+namespace ArtemiiKarkusha\DesignPatterns\Model\Prototype;
 
-use Maestro\DesignPatterns\Api\Prototype\CarInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Prototype\CarInterface;
 
 class Car implements CarInterface
 {

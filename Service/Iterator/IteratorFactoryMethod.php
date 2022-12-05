@@ -1,16 +1,16 @@
 <?php
 /**
  * @author Artemii Karkusha
- * @copyright Copyright (c)
+ * @copyright Copyright (c) (https://www.linkedin.com/in/artemiy-karkusha/)
  */
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Service\Iterator;
+namespace ArtemiiKarkusha\DesignPatterns\Service\Iterator;
 
 use InvalidArgumentException;
 use Iterator;
-use Maestro\DesignPatterns\Api\Iterator\Model\IterableCollection;
+use ArtemiiKarkusha\DesignPatterns\Api\Iterator\Model\IterableCollection;
 
 class IteratorFactoryMethod
 {

@@ -6,12 +6,12 @@
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Service\Interpreter;
+namespace ArtemiiKarkusha\DesignPatterns\Service\Interpreter;
 
-use Maestro\DesignPatterns\Api\Builder\PizzaInterface;
-use Maestro\DesignPatterns\Api\Interpreter\PizzaRecipeInterpreterInterface;
-use Maestro\DesignPatterns\Api\Builder\PizzaInterfaceFactory;
-use Maestro\DesignPatterns\Api\Interpreter\PizzaExpressionInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Builder\PizzaInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Interpreter\PizzaRecipeInterpreterInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Builder\PizzaInterfaceFactory;
+use ArtemiiKarkusha\DesignPatterns\Api\Interpreter\PizzaExpressionInterface;
 
 class PizzaRecipeInterpreter implements PizzaRecipeInterpreterInterface
 {

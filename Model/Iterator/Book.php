@@ -1,14 +1,14 @@
 <?php
 /**
  * @author Artemii Karkusha
- * @copyright Copyright (c)
+ * @copyright Copyright (c) (https://www.linkedin.com/in/artemiy-karkusha/)
  */
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Model\Iterator;
+namespace ArtemiiKarkusha\DesignPatterns\Model\Iterator;
 
-use Maestro\DesignPatterns\Api\Iterator\Model\BookInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Iterator\Model\BookInterface;
 
 class Book implements BookInterface
 {

@@ -6,11 +6,11 @@
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Service\Iterator;
+namespace ArtemiiKarkusha\DesignPatterns\Service\Iterator;
 
 use Iterator;
-use Maestro\DesignPatterns\Model\Iterator\CollectionOfBooks;
-use Maestro\DesignPatterns\Api\Iterator\Model\BookInterface;
+use ArtemiiKarkusha\DesignPatterns\Model\Iterator\CollectionOfBooks;
+use ArtemiiKarkusha\DesignPatterns\Api\Iterator\Model\BookInterface;
 
 class BooksIterator implements Iterator
 {

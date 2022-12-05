@@ -1,16 +1,16 @@
 <?php
 /**
  * @author Artemii Karkusha
- * @copyright Copyright (c)
+ * @copyright Copyright (c) (https://www.linkedin.com/in/artemiy-karkusha/)
  */
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Model\State;
+namespace ArtemiiKarkusha\DesignPatterns\Model\State;
 
-use Maestro\DesignPatterns\Api\State\Model\OvenInterface;
-use Maestro\DesignPatterns\Api\State\Model\OvenState\OvenStateInterface;
-use Maestro\DesignPatterns\Model\State\OvenState\ColdFactory as OvenStateColdFactory;
+use ArtemiiKarkusha\DesignPatterns\Api\State\Model\OvenInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\State\Model\OvenState\OvenStateInterface;
+use ArtemiiKarkusha\DesignPatterns\Model\State\OvenState\ColdFactory as OvenStateColdFactory;
 
 class Oven implements OvenInterface
 {

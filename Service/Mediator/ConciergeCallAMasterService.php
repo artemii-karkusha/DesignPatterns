@@ -6,9 +6,9 @@
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Service\Mediator;
+namespace ArtemiiKarkusha\DesignPatterns\Service\Mediator;
 
-class ConciergeCallAMasterService implements \Maestro\DesignPatterns\Api\Mediator\ConciergeServiceInterface
+class ConciergeCallAMasterService implements \ArtemiiKarkusha\DesignPatterns\Api\Mediator\ConciergeServiceInterface
 {
     /**
      * @inheritDoc

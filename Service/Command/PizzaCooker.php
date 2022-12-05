@@ -1,19 +1,19 @@
 <?php
 /**
  * @author Artemii Karkusha
- * @copyright Copyright (c)
+ * @copyright Copyright (c) (https://www.linkedin.com/in/artemiy-karkusha/)
  */
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Service\Command;
+namespace ArtemiiKarkusha\DesignPatterns\Service\Command;
 
-use Maestro\DesignPatterns\Api\Builder\IngredientForPizzaInterface;
-use Maestro\DesignPatterns\Api\Builder\PizzaInterface;
-use Maestro\DesignPatterns\Api\Command\Service\PizzaCookerInterface;
-use Maestro\DesignPatterns\Api\Builder\PizzaInterfaceFactory;
-use Maestro\DesignPatterns\Api\Command\Service\AddIngredientCommandInterface;
-use Magento\Framework\Exception\NotFoundException;
+use ArtemiiKarkusha\DesignPatterns\Api\Builder\IngredientForPizzaInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Builder\PizzaInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Command\Service\PizzaCookerInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Builder\PizzaInterfaceFactory;
+use ArtemiiKarkusha\DesignPatterns\Api\Command\Service\AddIngredientCommandInterface;
+use ArtemiiKarkusha\Framework\Exception\NotFoundException;
 
 class PizzaCooker implements PizzaCookerInterface
 {

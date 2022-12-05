@@ -1,18 +1,18 @@
 <?php
 /**
  * @author Artemii Karkusha
- * @copyright Copyright (c) Artemii Karkusha
+ * @copyright Copyright (c) (https://www.linkedin.com/in/artemiy-karkusha/)
  */
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Service\AbstractFactory;
+namespace ArtemiiKarkusha\DesignPatterns\Service\AbstractFactory;
 
-use Maestro\DesignPatterns\Api\AbstractFactory\FoodFactoryMethodForKitchenInterface;
-use Maestro\DesignPatterns\Service\FactoryMethod\FoodFactoryMethod;
+use ArtemiiKarkusha\DesignPatterns\Api\AbstractFactory\FoodFactoryMethodForKitchenInterface;
+use ArtemiiKarkusha\DesignPatterns\Service\FactoryMethod\FoodFactoryMethod;
 
-use Maestro\DesignPatterns\Model\AbstractFactory\JapaneseFood\Noodles;
-use Maestro\DesignPatterns\Model\AbstractFactory\JapaneseFood\Sushi;
+use ArtemiiKarkusha\DesignPatterns\Model\AbstractFactory\JapaneseFood\Noodles;
+use ArtemiiKarkusha\DesignPatterns\Model\AbstractFactory\JapaneseFood\Sushi;
 
 class JapaneseFoodFactoryMethod extends FoodFactoryMethod implements FoodFactoryMethodForKitchenInterface
 {

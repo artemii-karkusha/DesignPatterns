@@ -6,9 +6,9 @@
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Service\TemplateMethod;
+namespace ArtemiiKarkusha\DesignPatterns\Service\TemplateMethod;
 
-use Maestro\DesignPatterns\Api\TemplateMethod\FileWriterInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\TemplateMethod\FileWriterInterface;
 
 abstract class AbstractFileWriter implements FileWriterInterface
 {

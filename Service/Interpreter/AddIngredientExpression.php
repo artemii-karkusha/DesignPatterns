@@ -6,12 +6,12 @@
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Service\Interpreter;
+namespace ArtemiiKarkusha\DesignPatterns\Service\Interpreter;
 
-use Maestro\DesignPatterns\Api\Builder\IngredientForPizzaInterface;
-use Maestro\DesignPatterns\Api\Builder\PizzaInterface;
-use Maestro\DesignPatterns\Api\Command\Service\PizzaCookerInterface;
-use Maestro\DesignPatterns\Api\Interpreter\PizzaExpressionInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Builder\IngredientForPizzaInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Builder\PizzaInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Command\Service\PizzaCookerInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Interpreter\PizzaExpressionInterface;
 
 class AddIngredientExpression implements PizzaExpressionInterface
 {

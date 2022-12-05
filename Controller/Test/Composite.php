@@ -6,11 +6,11 @@
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Controller\Test;
+namespace ArtemiiKarkusha\DesignPatterns\Controller\Test;
 
-use Maestro\DesignPatterns\Api\Composite\ElementInterface;
-use Maestro\DesignPatterns\Model\Composite\LeafFactory;
-use Maestro\DesignPatterns\Model\Composite\NodeFactory;
+use ArtemiiKarkusha\DesignPatterns\Api\Composite\ElementInterface;
+use ArtemiiKarkusha\DesignPatterns\Model\Composite\LeafFactory;
+use ArtemiiKarkusha\DesignPatterns\Model\Composite\NodeFactory;
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\ResultFactory;
 

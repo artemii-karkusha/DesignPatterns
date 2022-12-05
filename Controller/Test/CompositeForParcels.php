@@ -6,12 +6,12 @@
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Controller\Test;
+namespace ArtemiiKarkusha\DesignPatterns\Controller\Test;
 
 use Magento\Framework\App\Action\HttpGetActionInterface;
-use Maestro\DesignPatterns\Api\CompositeForParcels\Service\ParcelManagementInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\CompositeForParcels\Service\ParcelManagementInterface;
 use Magento\Framework\Controller\ResultFactory;
-use Maestro\DesignPatterns\Service\CompositeForParcels\ParcelManagement;
+use ArtemiiKarkusha\DesignPatterns\Service\CompositeForParcels\ParcelManagement;
 
 class CompositeForParcels implements HttpGetActionInterface
 {

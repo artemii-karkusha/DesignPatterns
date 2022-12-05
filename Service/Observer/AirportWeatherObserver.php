@@ -6,10 +6,10 @@
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Service\Observer;
+namespace ArtemiiKarkusha\DesignPatterns\Service\Observer;
 
-use Maestro\DesignPatterns\Api\Observer\Model\StormInterface;
-use Maestro\DesignPatterns\Api\Observer\WeatherObserverInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Observer\Model\StormInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Observer\WeatherObserverInterface;
 
 class AirportWeatherObserver implements WeatherObserverInterface
 {

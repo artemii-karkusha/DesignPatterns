@@ -6,10 +6,10 @@
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Service\Strategy;
+namespace ArtemiiKarkusha\DesignPatterns\Service\Strategy;
 
-use Maestro\DesignPatterns\Api\Strategy\SorterListInterface;
-use Maestro\DesignPatterns\Api\Strategy\SortListStrategyInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Strategy\SorterListInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Strategy\SortListStrategyInterface;
 
 class SorterList implements SorterListInterface
 {

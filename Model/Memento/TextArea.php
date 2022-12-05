@@ -1,19 +1,19 @@
 <?php
 /**
  * @author Artemii Karkusha
- * @copyright Copyright (c)
+ * @copyright Copyright (c) (https://www.linkedin.com/in/artemiy-karkusha/)
  */
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Model\Memento;
+namespace ArtemiiKarkusha\DesignPatterns\Model\Memento;
 
-use Maestro\DesignPatterns\Api\Memento\Model\ItCanSaveAndRestoreState;
-use Maestro\DesignPatterns\Api\Memento\Model\MementoInterface;
-use Maestro\DesignPatterns\Api\Memento\Model\TextAreaInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Memento\Model\ItCanSaveAndRestoreState;
+use ArtemiiKarkusha\DesignPatterns\Api\Memento\Model\MementoInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Memento\Model\TextAreaInterface;
 use Magento\Framework\DataObject;
 use Magento\Framework\Serialize\Serializer\Json as JsonSerializer;
-use Maestro\DesignPatterns\Api\Memento\Model\MementoInterfaceFactory;
+use ArtemiiKarkusha\DesignPatterns\Api\Memento\Model\MementoInterfaceFactory;
 
 class TextArea extends DataObject implements TextAreaInterface, ItCanSaveAndRestoreState
 {

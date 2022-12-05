@@ -6,13 +6,13 @@
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Controller\Test;
+namespace ArtemiiKarkusha\DesignPatterns\Controller\Test;
 
 use Exception;
-use Maestro\DesignPatterns\Api\State\Model\OvenInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\State\Model\OvenInterface;
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\ResultFactory;
-use Maestro\DesignPatterns\Api\State\Model\OvenInterfaceFactory;
+use ArtemiiKarkusha\DesignPatterns\Api\State\Model\OvenInterfaceFactory;
 
 class State implements HttpGetActionInterface
 {

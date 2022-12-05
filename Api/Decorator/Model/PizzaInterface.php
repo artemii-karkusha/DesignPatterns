@@ -1,12 +1,12 @@
 <?php
 /**
  * @author Artemii Karkusha
- * @copyright Copyright (c)
+ * @copyright Copyright (c) (https://www.linkedin.com/in/artemiy-karkusha/)
  */
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Api\Decorator\Model;
+namespace ArtemiiKarkusha\DesignPatterns\Api\Decorator\Model;
 
 interface PizzaInterface
 {

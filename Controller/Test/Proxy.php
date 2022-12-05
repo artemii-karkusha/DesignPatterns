@@ -6,9 +6,9 @@
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Controller\Test;
+namespace ArtemiiKarkusha\DesignPatterns\Controller\Test;
 
-use Maestro\DesignPatterns\Api\Facade\CalculatorFacadeInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Facade\CalculatorFacadeInterface;
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\ResultFactory;
 

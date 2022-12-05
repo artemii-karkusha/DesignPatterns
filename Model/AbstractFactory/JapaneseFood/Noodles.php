@@ -1,14 +1,14 @@
 <?php
 /**
  * @author Artemii Karkusha
- * @copyright Copyright (c) Artemii Karkusha
+ * @copyright Copyright (c) (https://www.linkedin.com/in/artemiy-karkusha/)
  */
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Model\AbstractFactory\JapaneseFood;
+namespace ArtemiiKarkusha\DesignPatterns\Model\AbstractFactory\JapaneseFood;
 
-use Maestro\DesignPatterns\Api\FactoryMethod\FoodInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\FactoryMethod\FoodInterface;
 
 class Noodles implements FoodInterface
 {

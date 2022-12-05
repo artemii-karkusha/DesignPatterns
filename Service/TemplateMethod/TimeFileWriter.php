@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Service\TemplateMethod;
+namespace ArtemiiKarkusha\DesignPatterns\Service\TemplateMethod;
 
 class TimeFileWriter extends AbstractFileWriter
 {

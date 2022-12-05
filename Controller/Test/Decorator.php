@@ -6,16 +6,16 @@
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Controller\Test;
+namespace ArtemiiKarkusha\DesignPatterns\Controller\Test;
 
-use Maestro\DesignPatterns\Api\Decorator\Model\PizzaInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Decorator\Model\PizzaInterface;
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\ResultFactory;
-use Maestro\DesignPatterns\Model\Decorator\PizzaWithoutAnything;
-use Maestro\DesignPatterns\Model\Decorator\PizzaWithCheeseDecorator;
-use Maestro\DesignPatterns\Model\Decorator\PizzaWithMushroomsDecorator;
-use Maestro\DesignPatterns\Model\Decorator\PizzaWithPineapplesDecorator;
-use Maestro\DesignPatterns\Model\Decorator\PizzaWithSeafoodDecorator;
+use ArtemiiKarkusha\DesignPatterns\Model\Decorator\PizzaWithoutAnything;
+use ArtemiiKarkusha\DesignPatterns\Model\Decorator\PizzaWithCheeseDecorator;
+use ArtemiiKarkusha\DesignPatterns\Model\Decorator\PizzaWithMushroomsDecorator;
+use ArtemiiKarkusha\DesignPatterns\Model\Decorator\PizzaWithPineapplesDecorator;
+use ArtemiiKarkusha\DesignPatterns\Model\Decorator\PizzaWithSeafoodDecorator;
 
 class Decorator implements HttpGetActionInterface
 {

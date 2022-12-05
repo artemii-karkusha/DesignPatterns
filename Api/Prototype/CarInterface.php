@@ -1,12 +1,12 @@
 <?php
 /**
  * @author Artemii Karkusha
- * @copyright Copyright (c) Artemii Karkusha
+ * @copyright Copyright (c) (https://www.linkedin.com/in/artemiy-karkusha/)
  */
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Api\Prototype;
+namespace ArtemiiKarkusha\DesignPatterns\Api\Prototype;
 
 /**
  * Interface for cart

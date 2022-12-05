@@ -1,18 +1,18 @@
 <?php
 /**
  * @author Artemii Karkusha
- * @copyright Copyright (c) Artemii Karkusha
+ * @copyright Copyright (c) (https://www.linkedin.com/in/artemiy-karkusha/)
  */
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Service\AbstractFactory;
+namespace ArtemiiKarkusha\DesignPatterns\Service\AbstractFactory;
 
-use Maestro\DesignPatterns\Api\AbstractFactory\FoodFactoryMethodForKitchenInterface;
-use Maestro\DesignPatterns\Service\FactoryMethod\FoodFactoryMethod;
+use ArtemiiKarkusha\DesignPatterns\Api\AbstractFactory\FoodFactoryMethodForKitchenInterface;
+use ArtemiiKarkusha\DesignPatterns\Service\FactoryMethod\FoodFactoryMethod;
 
-use Maestro\DesignPatterns\Model\AbstractFactory\UkrainianFood\Borsch;
-use Maestro\DesignPatterns\Model\AbstractFactory\UkrainianFood\Vareniki;
+use ArtemiiKarkusha\DesignPatterns\Model\AbstractFactory\UkrainianFood\Borsch;
+use ArtemiiKarkusha\DesignPatterns\Model\AbstractFactory\UkrainianFood\Vareniki;
 
 class UkrainianFoodFactoryMethod extends FoodFactoryMethod implements FoodFactoryMethodForKitchenInterface
 {

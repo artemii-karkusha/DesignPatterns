@@ -1,14 +1,14 @@
 <?php
 /**
  * @author Artemii Karkusha
- * @copyright Copyright (c)
+ * @copyright Copyright (c) (https://www.linkedin.com/in/artemiy-karkusha/)
  */
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Model\Observer;
+namespace ArtemiiKarkusha\DesignPatterns\Model\Observer;
 
-use Maestro\DesignPatterns\Api\Observer\Model\StormInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Observer\Model\StormInterface;
 
 class Storm implements StormInterface
 {

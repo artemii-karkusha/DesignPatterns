@@ -1,14 +1,14 @@
 <?php
 /**
  * @author Artemii Karkusha
- * @copyright Copyright (c)
+ * @copyright Copyright (c) (https://www.linkedin.com/in/artemiy-karkusha/)
  */
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Service\Proxy;
+namespace ArtemiiKarkusha\DesignPatterns\Service\Proxy;
 
-use Maestro\DesignPatterns\Api\Facade\CalculatorFacadeInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Facade\CalculatorFacadeInterface;
 use Magento\Framework\App\CacheInterface;
 
 class CalculatorFacadeWithCaching implements CalculatorFacadeInterface

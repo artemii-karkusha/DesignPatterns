@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Service\Visitor;
+namespace ArtemiiKarkusha\DesignPatterns\Service\Visitor;
 
-use Maestro\DesignPatterns\Api\Visitor\VisitorInterface;
-use Maestro\DesignPatterns\Model\Builder\Bacon;
-use Maestro\DesignPatterns\Model\Builder\Cheese;
-use Maestro\DesignPatterns\Model\Builder\Pineapples;
-use Maestro\DesignPatterns\Api\Builder\PizzaBuilderInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Visitor\VisitorInterface;
+use ArtemiiKarkusha\DesignPatterns\Model\Builder\Bacon;
+use ArtemiiKarkusha\DesignPatterns\Model\Builder\Cheese;
+use ArtemiiKarkusha\DesignPatterns\Model\Builder\Pineapples;
+use ArtemiiKarkusha\DesignPatterns\Api\Builder\PizzaBuilderInterface;
 
 class PizzaMaker implements VisitorInterface
 {

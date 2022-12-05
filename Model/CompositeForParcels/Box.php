@@ -1,15 +1,15 @@
 <?php
 /**
  * @author Artemii Karkusha
- * @copyright Copyright (c)
+ * @copyright Copyright (c) (https://www.linkedin.com/in/artemiy-karkusha/)
  */
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Model\CompositeForParcels;
+namespace ArtemiiKarkusha\DesignPatterns\Model\CompositeForParcels;
 
-use Maestro\DesignPatterns\Api\CompositeForParcels\Model\ContainerOfParcelInterface;
-use Maestro\DesignPatterns\Api\CompositeForParcels\Model\ContainerTypesInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\CompositeForParcels\Model\ContainerOfParcelInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\CompositeForParcels\Model\ContainerTypesInterface;
 
 class Box implements ContainerOfParcelInterface
 {

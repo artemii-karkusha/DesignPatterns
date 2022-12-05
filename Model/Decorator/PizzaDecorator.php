@@ -1,14 +1,14 @@
 <?php
 /**
  * @author Artemii Karkusha
- * @copyright Copyright (c)
+ * @copyright Copyright (c) (https://www.linkedin.com/in/artemiy-karkusha/)
  */
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Model\Decorator;
+namespace ArtemiiKarkusha\DesignPatterns\Model\Decorator;
 
-use Maestro\DesignPatterns\Api\Decorator\Model\PizzaInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Decorator\Model\PizzaInterface;
 
 abstract class PizzaDecorator implements PizzaInterface
 {

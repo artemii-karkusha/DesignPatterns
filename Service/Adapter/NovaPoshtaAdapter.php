@@ -1,14 +1,14 @@
 <?php
 /**
  * @author Artemii Karkusha
- * @copyright Copyright (c)
+ * @copyright Copyright (c) (https://www.linkedin.com/in/artemiy-karkusha/)
  */
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Service\Adapter;
+namespace ArtemiiKarkusha\DesignPatterns\Service\Adapter;
 
-use Maestro\DesignPatterns\Api\Adapter\NovaPoshtaAdapterInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Adapter\NovaPoshtaAdapterInterface;
 
 class NovaPoshtaAdapter implements NovaPoshtaAdapterInterface
 {

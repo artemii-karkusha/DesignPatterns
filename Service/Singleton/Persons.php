@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Service\Singleton;
+namespace ArtemiiKarkusha\DesignPatterns\Service\Singleton;
 
 /**
  * Singleton

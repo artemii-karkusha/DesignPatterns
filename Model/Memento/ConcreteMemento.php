@@ -1,14 +1,14 @@
 <?php
 /**
  * @author Artemii Karkusha
- * @copyright Copyright (c)
+ * @copyright Copyright (c) (https://www.linkedin.com/in/artemiy-karkusha/)
  */
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Model\Memento;
+namespace ArtemiiKarkusha\DesignPatterns\Model\Memento;
 
-use Maestro\DesignPatterns\Api\Memento\Model\MementoInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Memento\Model\MementoInterface;
 
 class ConcreteMemento implements MementoInterface
 {

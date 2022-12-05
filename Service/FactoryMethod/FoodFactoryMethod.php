@@ -1,18 +1,18 @@
 <?php
 /**
  * @author Artemii Karkusha
- * @copyright Copyright (c) Artemii Karkusha
+ * @copyright Copyright (c) (https://www.linkedin.com/in/artemiy-karkusha/)
  */
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Service\FactoryMethod;
+namespace ArtemiiKarkusha\DesignPatterns\Service\FactoryMethod;
 
 use InvalidArgumentException;
-use Maestro\DesignPatterns\Api\FactoryMethod\FoodFactoryMethodInterface;
-use Maestro\DesignPatterns\Api\FactoryMethod\FoodInterface;
-use Maestro\DesignPatterns\Model\FactoryMethod\Meat;
-use Maestro\DesignPatterns\Model\FactoryMethod\Potato;
+use ArtemiiKarkusha\DesignPatterns\Api\FactoryMethod\FoodFactoryMethodInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\FactoryMethod\FoodInterface;
+use ArtemiiKarkusha\DesignPatterns\Model\FactoryMethod\Meat;
+use ArtemiiKarkusha\DesignPatterns\Model\FactoryMethod\Potato;
 
 class FoodFactoryMethod implements FoodFactoryMethodInterface
 {

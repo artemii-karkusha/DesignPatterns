@@ -6,11 +6,11 @@
 
 declare(strict_types=1);
 
-namespace Maestro\DesignPatterns\Service\Observer;
+namespace ArtemiiKarkusha\DesignPatterns\Service\Observer;
 
-use Maestro\DesignPatterns\Api\Observer\Model\StormInterface;
-use Maestro\DesignPatterns\Api\Observer\Model\StormInterfaceFactory;
-use Maestro\DesignPatterns\Api\Observer\WeatherServiceInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Observer\Model\StormInterface;
+use ArtemiiKarkusha\DesignPatterns\Api\Observer\Model\StormInterfaceFactory;
+use ArtemiiKarkusha\DesignPatterns\Api\Observer\WeatherServiceInterface;
 
 class WeatherService implements WeatherServiceInterface
 {
