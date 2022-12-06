@@ -12,6 +12,7 @@ use ArtemiiKarkusha\DesignPatterns\Api\Builder\PizzaInterface;
 use ArtemiiKarkusha\DesignPatterns\Api\Interpreter\PizzaRecipeInterpreterInterface;
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\ResultFactory;
+use Magento\Framework\Controller\ResultInterface;
 
 class Interpreter implements HttpGetActionInterface
 {
@@ -28,14 +29,13 @@ class Interpreter implements HttpGetActionInterface
     /**
      * @inheritDoc
      */
-    public function execute()
+    public function execute(): ResultInterface
     {
         return $this->resultFactory->create(ResultFactory::TYPE_RAW)->setContents($this->getContents());
     }
 
     /**
      * @return string
-     * @noinspection PhpDocMissingThrowsInspection
      */
     private function getContents(): string
     {

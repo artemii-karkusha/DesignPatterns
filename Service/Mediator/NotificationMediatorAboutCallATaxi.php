@@ -18,6 +18,6 @@ class NotificationMediatorAboutCallATaxi implements NotificationMediatorInterfac
     public function notifyAboutRequest(string $requestName): void
     {
         echo 'Notify all about call a taxi. <br>';
-        echo 'Notify a accounting about price a taxi <br>';
+        echo 'Notify an accounting about price a taxi <br>';
     }
 }

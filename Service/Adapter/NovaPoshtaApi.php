@@ -21,6 +21,7 @@ class NovaPoshtaApi
 
     /**
      *
+     * @param string $nomerPosiltki
      * @return string
      */
     public function poluchitStatusPoPosiltki(string $nomerPosiltki): string

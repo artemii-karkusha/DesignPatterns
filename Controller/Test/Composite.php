@@ -13,6 +13,7 @@ use ArtemiiKarkusha\DesignPatterns\Model\Composite\LeafFactory;
 use ArtemiiKarkusha\DesignPatterns\Model\Composite\NodeFactory;
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\ResultFactory;
+use Magento\Framework\Controller\ResultInterface;
 
 /**
  * Controller for test Builder functionality
@@ -28,16 +29,16 @@ class Composite implements HttpGetActionInterface
         private LeafFactory $leafFactory,
         private NodeFactory $nodeFactory,
         private ResultFactory $resultFactory
-    ) {}
+    ) {
+    }
 
     /**
      * @inheritDoc
-     * @noinspection PhpCSValidationInspection
      */
-    public function execute()
+    public function execute(): ResultInterface
     {
         return $this->resultFactory->create(ResultFactory::TYPE_RAW)
-            ->setContents(sprintf("Number for tree: %s. It must be 11.", $this->getTree()->getNumber()));
+            ->setContents(sprintf('Number for tree: %s. It must be 11.', $this->getTree()->getNumber()));
     }
 
     /**

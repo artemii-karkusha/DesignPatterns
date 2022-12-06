@@ -15,7 +15,7 @@ class ReadyToWork extends AbstractOvenState
      */
     public function bake(): void
     {
-        echo "Oven has cooked something <br>";
+        echo 'Oven has cooked something <br>';
     }
 
     /**

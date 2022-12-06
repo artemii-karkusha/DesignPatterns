@@ -16,6 +16,7 @@ use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\ResultFactory;
 use ArtemiiKarkusha\DesignPatterns\Api\Visitor\VisitorInterface;
 use ArtemiiKarkusha\DesignPatterns\Api\Builder\PizzaBuilderInterface;
+use Magento\Framework\Controller\ResultInterface;
 
 class Visitor implements HttpGetActionInterface
 {
@@ -33,9 +34,8 @@ class Visitor implements HttpGetActionInterface
 
     /**
      * @inheritDoc
-     * @noinspection PhpCSValidationInspection
      */
-    public function execute()
+    public function execute(): ResultInterface
     {
         return $this->resultFactory->create(ResultFactory::TYPE_RAW)->setContents($this->getContents());
     }
@@ -65,7 +65,7 @@ class Visitor implements HttpGetActionInterface
         $responseText = sprintf("<br>Pizza number\"#%s\"{", spl_object_id($pizza));
         foreach ($pizza->getIngredients() as $ingredient) {
             $responseText .= sprintf(
-                "ingredient: \"%s\", ",
+                'ingredient: "%s", ',
                 $ingredient->getName(),
             );
         }

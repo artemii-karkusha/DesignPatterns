@@ -8,7 +8,9 @@ declare(strict_types=1);
 
 namespace ArtemiiKarkusha\DesignPatterns\Model\Builder;
 
-abstract class Ingredient implements \ArtemiiKarkusha\DesignPatterns\Api\Builder\IngredientForPizzaInterface
+use ArtemiiKarkusha\DesignPatterns\Api\Builder\IngredientForPizzaInterface;
+
+abstract class Ingredient implements IngredientForPizzaInterface
 {
     public const INGREDIENT_NAME = '';
 

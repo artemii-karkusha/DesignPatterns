@@ -20,7 +20,7 @@ class AmericanFoodFactoryMethod extends FoodFactoryMethod implements FoodFactory
     /**
      * @var string[]
      */
-    public static $foodFactoryList = [
+    public static array $foodFactoryList = [
         Burger::FOOD_NAME => Burger::class,
         FriedPotatoes::FOOD_NAME => FriedPotatoes::class
     ];

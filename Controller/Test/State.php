@@ -13,6 +13,7 @@ use ArtemiiKarkusha\DesignPatterns\Api\State\Model\OvenInterface;
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\ResultFactory;
 use ArtemiiKarkusha\DesignPatterns\Api\State\Model\OvenInterfaceFactory;
+use Magento\Framework\Controller\ResultInterface;
 
 class State implements HttpGetActionInterface
 {
@@ -28,9 +29,8 @@ class State implements HttpGetActionInterface
 
     /**
      * @inheritDoc
-     * @noinspection PhpCSValidationInspection
      */
-    public function execute()
+    public function execute(): ResultInterface
     {
         $this->getContents();
         return $this->resultFactory->create(ResultFactory::TYPE_RAW);
@@ -44,26 +44,26 @@ class State implements HttpGetActionInterface
         /** @var OvenInterface $oven */
         $oven = $this->ovenFactory->create(); // State is Cold
         try {
-            echo "Oven is trying to bake. <br>";
+            echo 'Oven is trying to bake. <br>';
             echo 'State is Cold <br>';
             $oven->bake();
         } catch (Exception $exception) {
             echo $exception->getMessage() . '<br>';
         }
 
-        echo "Oven is trying to warm. <br>";
-        $oven->warm();
-        echo 'State is ReadyToWork <br>';
-        echo "Oven is trying to bake. <br>";
-        $oven->bake();
-        echo "Oven is trying to bake. <br>";
-        $oven->bake();
-        $oven->warm();
-        echo 'State is Hot<br>';
-        $oven->warm();
-        $oven->warm();
         try {
-            echo "Oven is trying to bake. <br>";
+            echo 'Oven is trying to warm. <br>';
+            $oven->warm();
+            echo 'State is ReadyToWork <br>';
+            echo 'Oven is trying to bake. <br>';
+            $oven->bake();
+            echo 'Oven is trying to bake. <br>';
+            $oven->bake();
+            $oven->warm();
+            echo 'State is Hot<br>';
+            $oven->warm();
+            $oven->warm();
+            echo 'Oven is trying to bake. <br>';
             $oven->bake();
         } catch (Exception $exception) {
             echo $exception->getMessage() . '<br>';

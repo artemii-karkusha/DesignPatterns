@@ -11,6 +11,7 @@ namespace ArtemiiKarkusha\DesignPatterns\Controller\Test;
 use ArtemiiKarkusha\DesignPatterns\Api\Facade\CalculatorFacadeInterface;
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\ResultFactory;
+use Magento\Framework\Controller\ResultInterface;
 
 class Proxy implements HttpGetActionInterface
 {
@@ -26,9 +27,8 @@ class Proxy implements HttpGetActionInterface
 
     /**
      * @inheritDoc
-     * @noinspection PhpCSValidationInspection
      */
-    public function execute()
+    public function execute(): ResultInterface
     {
         return $this->resultFactory->create(ResultFactory::TYPE_RAW)
             ->setContents($this->getContents());
@@ -46,9 +46,12 @@ class Proxy implements HttpGetActionInterface
         $dividedNumber = $this->calculatorFacade->divide($firstNumber, $secondNumber);
         $dividedNumberFromCache = $this->calculatorFacade->divide($firstNumber, $secondNumber);
         return sprintf(
-            "Devided number: %s. Subtracted number: %s",
+            'Devided number: %s; Devided number from cache: %s.
+            Subtracted number: %s; Subtracted number: %s from cache',
+            $dividedNumber,
+            $dividedNumberFromCache,
+            $subtractedNumber,
             $subtractedNumberFromCache,
-            $dividedNumberFromCache
         );
     }
 }

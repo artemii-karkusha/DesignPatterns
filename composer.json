@@ -7,6 +7,9 @@
         "php": "~8.1.0",
         "magento/framework": "*"
     },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest"
+    },
     "license": [
         "Open Software License (OSL)"
     ],

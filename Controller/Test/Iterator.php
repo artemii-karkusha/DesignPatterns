@@ -15,6 +15,7 @@ use ArtemiiKarkusha\DesignPatterns\Model\Iterator\CollectionOfBooks;
 use ArtemiiKarkusha\DesignPatterns\Service\Iterator\BooksSortedByAuthorNameIterator;
 use ArtemiiKarkusha\DesignPatterns\Service\Iterator\BooksSortedByBookNameIterator;
 use ArtemiiKarkusha\DesignPatterns\Api\Iterator\Model\BookInterfaceFactory;
+use Magento\Framework\Controller\ResultInterface;
 
 class Iterator implements HttpGetActionInterface
 {
@@ -32,9 +33,8 @@ class Iterator implements HttpGetActionInterface
 
     /**
      * @inheritDoc
-     * @noinspection PhpCSValidationInspection
      */
-    public function execute()
+    public function execute(): ResultInterface
     {
         return $this->resultFactory->create(ResultFactory::TYPE_RAW)
             ->setContents($this->getContents());
@@ -84,8 +84,8 @@ class Iterator implements HttpGetActionInterface
 
 
         return sprintf(
-            "BooksList name: %s. Books of author names: %s. Books of names: %s;<br>
-                    BooksList name: %s. Books of author names: %s. Books of names: %s",
+            'BooksList name: %s. Books of author names: %s. Books of names: %s;<br>
+                    BooksList name: %s. Books of author names: %s. Books of names: %s',
             'booksSortedByAuthorName',
             $this->getAuthorNames($booksSortedByAuthorName),
             $this->getBooksNames($booksSortedByAuthorName),

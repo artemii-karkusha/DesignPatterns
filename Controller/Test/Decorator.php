@@ -16,6 +16,7 @@ use ArtemiiKarkusha\DesignPatterns\Model\Decorator\PizzaWithCheeseDecorator;
 use ArtemiiKarkusha\DesignPatterns\Model\Decorator\PizzaWithMushroomsDecorator;
 use ArtemiiKarkusha\DesignPatterns\Model\Decorator\PizzaWithPineapplesDecorator;
 use ArtemiiKarkusha\DesignPatterns\Model\Decorator\PizzaWithSeafoodDecorator;
+use Magento\Framework\Controller\ResultInterface;
 
 class Decorator implements HttpGetActionInterface
 {
@@ -24,13 +25,13 @@ class Decorator implements HttpGetActionInterface
      */
     public function __construct(
         private ResultFactory $resultFactory,
-    ) {}
+    ) {
+    }
 
     /**
      * @inheritDoc
-     * @noinspection PhpCSValidationInspection
      */
-    public function execute()
+    public function execute(): ResultInterface
     {
         return $this->resultFactory->create(ResultFactory::TYPE_RAW)
             ->setContents($this->getContents());

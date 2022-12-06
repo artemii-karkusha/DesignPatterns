@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace ArtemiiKarkusha\DesignPatterns\Controller\Test;
 
-
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\ResultFactory;
 use ArtemiiKarkusha\DesignPatterns\Api\CoR\Service\EmergencyServicesManagerInterface;
@@ -17,6 +16,7 @@ use ArtemiiKarkusha\DesignPatterns\Api\CoR\Model\PhoneInterface;
 use ArtemiiKarkusha\DesignPatterns\Service\CoR\FireDepartmentCallerService;
 use ArtemiiKarkusha\DesignPatterns\Service\CoR\MedicalServiceCaller;
 use ArtemiiKarkusha\DesignPatterns\Service\CoR\PoliceDepartmentCallerService;
+use Magento\Framework\Controller\ResultInterface;
 
 class CoR implements HttpGetActionInterface
 {
@@ -37,9 +37,8 @@ class CoR implements HttpGetActionInterface
 
     /**
      * @inheritDoc
-     * @noinspection PhpCSValidationInspection
      */
-    public function execute()
+    public function execute(): ResultInterface
     {
         return $this->resultFactory->create(ResultFactory::TYPE_RAW)
             ->setContents($this->getContents());

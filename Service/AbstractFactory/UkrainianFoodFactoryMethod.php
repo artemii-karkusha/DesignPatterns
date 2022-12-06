@@ -21,7 +21,7 @@ class UkrainianFoodFactoryMethod extends FoodFactoryMethod implements FoodFactor
     /**
      * @var string[]
      */
-    public static $foodFactoryList = [
+    public static array $foodFactoryList = [
         Borsch::FOOD_NAME => Borsch::class,
         Vareniki::FOOD_NAME => Vareniki::class
     ];

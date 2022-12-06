@@ -11,7 +11,6 @@ namespace ArtemiiKarkusha\DesignPatterns\Controller\Test;
 use InvalidArgumentException;
 use ArtemiiKarkusha\DesignPatterns\Api\Prototype\CarInterface;
 use Magento\Framework\App\Action\HttpGetActionInterface;
-use Magento\Framework\App\ResponseInterface;
 use Magento\Framework\Controller\ResultInterface;
 use Magento\Framework\Exception\NotFoundException;
 use Magento\Framework\Controller\ResultFactory;
@@ -43,18 +42,16 @@ class Prototype implements HttpGetActionInterface
     }
 
     /**
-     * Execute action based on request and return result
-     * @return ResultInterface|ResponseInterface
-     * @throws NotFoundException
+     * @inheritDoc
      */
-    public function execute()
+    public function execute(): ResultInterface
     {
+        $passengerCarNumber = '123456pc';
+        $truckCarNumber = '123456truck';
+        $minivanNumber = '123456minivan';
+        $color = 'black';
 
         try {
-            $passengerCarNumber = '123456pc';
-            $truckCarNumber = '123456truck';
-            $minivanNumber = '123456minivan';
-            $color = 'black';
             $cars [] = $this->carPrototype->createPassengerCar($color, $passengerCarNumber);
             $cars [] = $this->carPrototype->createTruck($color, $truckCarNumber);
             $cars [] = $this->carPrototype->createMinivan($color, $minivanNumber);
@@ -73,7 +70,7 @@ class Prototype implements HttpGetActionInterface
         $responseText = '';
         foreach ($cars as $car) {
             $responseText .= sprintf(
-                "<br>Car data number\"#%s\"{ car type: \"%s\", car number :%s\", car color :%s\"}",
+                '<br>Car data number"#%s"{ car type: "%s", car number :%s", car color :%s"}',
                 spl_object_id($car),
                 $car->getTypeCar(),
                 $car->getNumber(),

@@ -19,7 +19,7 @@ class FoodFactoryMethod implements FoodFactoryMethodInterface
     /**
      * @var string[]
      */
-    public static $foodFactoryList = [
+    public static array $foodFactoryList = [
         Meat::MEAT_NAME => Meat::class,
         Potato::MEAT_NAME => Potato::class
     ];

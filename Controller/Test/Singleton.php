@@ -10,7 +10,6 @@ namespace ArtemiiKarkusha\DesignPatterns\Controller\Test;
 
 use InvalidArgumentException;
 use Magento\Framework\App\Action\HttpGetActionInterface;
-use Magento\Framework\App\ResponseInterface;
 use Magento\Framework\Controller\ResultInterface;
 use Magento\Framework\Exception\NotFoundException;
 use Magento\Framework\Controller\ResultFactory;
@@ -36,13 +35,10 @@ class Singleton implements HttpGetActionInterface
     }
 
     /**
-     * Execute action based on request and return result
-     * @return ResultInterface|ResponseInterface
-     * @throws NotFoundException
+     * @inheritDoc
      */
-    public function execute()
+    public function execute(): ResultInterface
     {
-
         try {
             $persons = [];
             for ($i = 0; $i < 15; $i++) {
@@ -64,7 +60,7 @@ class Singleton implements HttpGetActionInterface
         $responseText = '';
         foreach ($personsList as $persons) {
             $responseText .= sprintf(
-                "<br>Persons data number\"#%s\"{ persons hash: \"%s\"}",
+                '<br>Persons data number"#%s"{ persons hash: "%s"}',
                 spl_object_id($persons),
                 $persons->getHash(),
             );

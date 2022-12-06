@@ -20,18 +20,24 @@ class IteratorFactoryMethod
     /**
      * @param Iterator[] $factoriesIterators
      */
-    public function __construct(private array $factoriesIterators = []) {}
+    public function __construct(
+        private array $factoriesIterators = []
+    ) {
+    }
 
     /**
      * @param IterableCollection $iterableCollection
      * @param string $iteratorName
      * @return Iterator
+     *
+     * @noinspection PhpPossiblePolymorphicInvocationInspection
+     * @noinspection PhpStaticAsDynamicMethodCallInspection
      */
     public function createIterator(IterableCollection $iterableCollection, string $iteratorName): Iterator
     {
         try {
             $iteratorFactory = $this->getFactoryByIteratorName($iteratorName);
-        } catch (InvalidArgumentException $invalidArgumentException) {
+        } catch (InvalidArgumentException) {
             $iteratorFactory = $this->getFactoryByIteratorName(self::DEFAULT_BOOKS_ITERATOR_NAME);
         }
 

@@ -41,7 +41,7 @@ class BooksSortedByAuthorNameIterator implements Iterator
     private function getSortedBooks(CollectionOfBooks $collectionOfBooks): array
     {
         $sortedBooks = $collectionOfBooks->getItems();
-        usort($sortedBooks, function (BookInterface $book1, BookInterface $book2) {
+        usort($sortedBooks, static function (BookInterface $book1, BookInterface $book2) {
             return strcmp($book1->getAuthorName(), $book2->getAuthorName());
         });
 

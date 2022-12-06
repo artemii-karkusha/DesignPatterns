@@ -14,19 +14,23 @@ use Magento\Framework\Exception\NotFoundException;
 interface CaretakerInterface
 {
     /**
+     *
      * @param ItCanSaveAndRestoreState $item
      * @return void
      */
     public function backup(ItCanSaveAndRestoreState $item): void;
 
     /**
+     *
      * @param ItCanSaveAndRestoreState $item
      * @return void
      */
     public function undo(ItCanSaveAndRestoreState $item): void;
 
     /**
+     *
      * @param ItCanSaveAndRestoreState $item
+     * @param int $version
      * @return void
      *
      * @throws NotFoundException
@@ -34,6 +38,7 @@ interface CaretakerInterface
     public function restoreToVersion(ItCanSaveAndRestoreState $item, int $version): void;
 
     /**
+     *
      * @param ItCanSaveAndRestoreState $item
      * @return void
      */

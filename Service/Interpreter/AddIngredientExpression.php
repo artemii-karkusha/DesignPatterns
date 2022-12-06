@@ -12,6 +12,7 @@ use ArtemiiKarkusha\DesignPatterns\Api\Builder\IngredientForPizzaInterface;
 use ArtemiiKarkusha\DesignPatterns\Api\Builder\PizzaInterface;
 use ArtemiiKarkusha\DesignPatterns\Api\Command\Service\PizzaCookerInterface;
 use ArtemiiKarkusha\DesignPatterns\Api\Interpreter\PizzaExpressionInterface;
+use Magento\Framework\Exception\NotFoundException;
 
 class AddIngredientExpression implements PizzaExpressionInterface
 {
@@ -53,9 +54,20 @@ class AddIngredientExpression implements PizzaExpressionInterface
     private function getIngredientsFromExpression(string $expression): array
     {
         foreach ($this->getIngredientsNamesFromExpression($expression) as $ingredientName) {
-            $this->pizzaCooker->addIngredientByName($ingredientName);
+            $this->addIngredientByName($ingredientName);
         }
         return $this->pizzaCooker->makePizza()->getIngredients();
+    }
+
+    /**
+     * @param string $ingredientName
+     * @return void
+     */
+    private function addIngredientByName(string $ingredientName): void
+    {
+        try {
+            $this->pizzaCooker->addIngredientByName($ingredientName);
+        } catch (NotFoundException) {}
     }
 
     /**
@@ -88,12 +100,12 @@ class AddIngredientExpression implements PizzaExpressionInterface
     private function getExpressionForCurrentContext(string $expression): string
     {
         $expressions = explode(self::EXPRESSION_SEPARATOR, $expression);
-        foreach ($expressions as $expressionKey => $expression) {
+        foreach ($expressions as $expression) {
             if(!str_contains($expression, self::ADD_INGREDIENT_EXPRESSION)){
                 continue;
             }
 
-            return $expressions[$expressionKey];
+            return $expression;
         }
 
         return '';

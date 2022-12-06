@@ -2,6 +2,8 @@
 /**
  * @author Artemii Karkusha
  * @copyright Copyright (c)
+ *
+ * @noinspection ForeachInvariantsInspection
  */
 
 declare(strict_types=1);
