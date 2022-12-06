@@ -11,6 +11,7 @@ namespace ArtemiiKarkusha\DesignPatterns\Controller\Test;
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\ResultFactory;
 use ArtemiiKarkusha\DesignPatterns\Api\Facade\CalculatorFacadeInterface;
+use Magento\Framework\Controller\ResultInterface;
 
 class Facade implements HttpGetActionInterface
 {
@@ -25,9 +26,8 @@ class Facade implements HttpGetActionInterface
 
     /**
      * @inheritDoc
-     * @noinspection PhpCSValidationInspection
      */
-    public function execute()
+    public function execute(): ResultInterface
     {
         return $this->resultFactory->create(ResultFactory::TYPE_RAW)
             ->setContents($this->getContents());
@@ -42,6 +42,6 @@ class Facade implements HttpGetActionInterface
         $secondNumber = 5;
         $subtractedNumber = $this->calculatorFacade->subtract($firstNumber, $secondNumber);
         $dividedNumber = $this->calculatorFacade->divide($firstNumber, $secondNumber);
-        return sprintf("Devided number: %s. Subtracted number: %s", $dividedNumber, $subtractedNumber);
+        return sprintf('Devided number: %s. Subtracted number: %s', $dividedNumber, $subtractedNumber);
     }
 }

@@ -8,6 +8,8 @@ declare(strict_types=1);
 
 namespace ArtemiiKarkusha\DesignPatterns\Service\Singleton;
 
+use Exception;
+
 /**
  * Singleton
  */
@@ -38,7 +40,7 @@ class Persons
     public static function getInstance(): Persons
     {
         if (count(static::$persons) < 10) {
-            static::$persons[] = new Persons(bin2hex(random_bytes(22)));
+            static::$persons[] = new Persons(bin2hex(self::getRandomBytes()));
         }
 
         return array_last(static::$persons);
@@ -51,5 +53,15 @@ class Persons
     public function getHash(): string
     {
         return $this->hash;
+    }
+
+    /**
+     * @return string
+     */
+    private static function getRandomBytes(): string
+    {
+        try {
+            return random_bytes(22);
+        } catch (Exception) {}
     }
 }

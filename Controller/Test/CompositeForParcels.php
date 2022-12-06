@@ -12,6 +12,7 @@ use Magento\Framework\App\Action\HttpGetActionInterface;
 use ArtemiiKarkusha\DesignPatterns\Api\CompositeForParcels\Service\ParcelManagementInterface;
 use Magento\Framework\Controller\ResultFactory;
 use ArtemiiKarkusha\DesignPatterns\Service\CompositeForParcels\ParcelManagement;
+use Magento\Framework\Controller\ResultInterface;
 
 class CompositeForParcels implements HttpGetActionInterface
 {
@@ -22,12 +23,13 @@ class CompositeForParcels implements HttpGetActionInterface
     public function __construct(
         public ParcelManagementInterface $parcelManagement,
         private ResultFactory $resultFactory
-    ) {}
+    ) {
+    }
 
     /**
      * @inheritDoc
      */
-    public function execute()
+    public function execute(): ResultInterface
     {
         return $this->resultFactory->create(ResultFactory::TYPE_RAW)->setContents($this->getContents());
     }

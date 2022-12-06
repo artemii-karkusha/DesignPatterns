@@ -47,11 +47,9 @@ class Builder implements HttpGetActionInterface
     }
 
     /**
-     * Execute action based on request and return result
-     * @return ResultInterface|ResponseInterface
-     * @throws NotFoundException
+     * @inheritDoc
      */
-    public function execute()
+    public function execute(): ResultInterface
     {
         try {
             $this->pizzaBuilder
@@ -60,7 +58,7 @@ class Builder implements HttpGetActionInterface
                 ->addIngredient(Mushrooms::INGREDIENT_NAME)
                 ->addIngredient(Pineapples::INGREDIENT_NAME);
         } catch (InvalidArgumentException $invalidArgumentException) {
-            die((string)__($invalidArgumentException->getMessage()));
+            throw (new NotFoundException(__($invalidArgumentException->getMessage())));
         }
         return $this->resultFactory->create(ResultFactory::TYPE_RAW)->setContents(
             $this->getResponseText($this->pizzaBuilder->getPizza())
@@ -77,10 +75,10 @@ class Builder implements HttpGetActionInterface
             return '';
         }
 
-        $responseText = sprintf("<br>Pizza number\"#%s\"{", spl_object_id($pizza));
+        $responseText = sprintf('<br>Pizza number"#%s"{', spl_object_id($pizza));
         foreach ($pizza->getIngredients() as $ingredient) {
             $responseText .= sprintf(
-                "ingredient: \"%s\", ",
+                'ingredient: "%s", ',
                 $ingredient->getName(),
             );
         }

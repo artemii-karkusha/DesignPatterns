@@ -49,7 +49,7 @@ class StormNotifier implements WeatherNotifierInterface
      */
     public function notify(StormInterface $storm): void
     {
-        echo "StormNotifier: Notifying weather observers...<br>";
+        echo 'StormNotifier: Notifying weather observers...<br>';
         foreach ($this->observers as $weatherObserver) {
             $weatherObserver->update($storm);
         }

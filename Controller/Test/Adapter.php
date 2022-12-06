@@ -10,7 +10,6 @@ namespace ArtemiiKarkusha\DesignPatterns\Controller\Test;
 
 use InvalidArgumentException;
 use Magento\Framework\App\Action\HttpGetActionInterface;
-use Magento\Framework\App\ResponseInterface;
 use Magento\Framework\Controller\ResultInterface;
 use Magento\Framework\Exception\NotFoundException;
 use Magento\Framework\Controller\ResultFactory;
@@ -42,11 +41,9 @@ class Adapter implements HttpGetActionInterface
     }
 
     /**
-     * Execute action based on request and return result
-     * @return ResultInterface|ResponseInterface
-     * @throws NotFoundException
+     * @inheritDoc
      */
-    public function execute()
+    public function execute(): ResultInterface
     {
 
         try {
@@ -54,7 +51,7 @@ class Adapter implements HttpGetActionInterface
                 $this->novaPoshtaAdapter->getWarehousesList()
             );
             $responseText .= sprintf(
-                "<br> Status #%s",
+                '<br> Status #%s',
                 $this->novaPoshtaAdapter->getStatusForParcelByNumber('123123')
             );
         } catch (InvalidArgumentException $invalidArgumentException) {
@@ -72,7 +69,7 @@ class Adapter implements HttpGetActionInterface
         $responseText = '';
         foreach ($warehouses as $warehouse) {
             $responseText .= sprintf(
-                "Warehouse \"#%s\", ",
+                'Warehouse "#%s", ',
                 $warehouse,
             );
         }

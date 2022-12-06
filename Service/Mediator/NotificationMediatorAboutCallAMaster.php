@@ -18,6 +18,6 @@ class NotificationMediatorAboutCallAMaster implements NotificationMediatorInterf
     public function notifyAboutRequest(string $requestName): void
     {
         echo 'Notify all about call a master. <br>';
-        echo 'Notify a accounting about price a master. <br>';
+        echo 'Notify an accounting about price a master. <br>';
     }
 }

@@ -4,6 +4,8 @@
  * @copyright Copyright (c) (https://www.linkedin.com/in/artemiy-karkusha/)
  */
 
+declare(strict_types=1);
+
 namespace ArtemiiKarkusha\DesignPatterns\Service\Builder;
 
 use InvalidArgumentException;
@@ -20,25 +22,13 @@ class PizzaBuilder implements PizzaBuilderInterface
     private array $ingredients = [];
 
     /**
-     * @var PizzaIngredientFactoryMethodInterface
-     */
-    private PizzaIngredientFactoryMethodInterface $ingredientFactoryMethod;
-
-    /**
-     * @var PizzaInterfaceFactory
-     */
-    private PizzaInterfaceFactory $pizzaFactory;
-
-    /**
      * @param PizzaIngredientFactoryMethodInterface $ingredientFactoryMethod
      * @param PizzaInterfaceFactory $pizzaFactory
      */
     public function __construct(
-        PizzaIngredientFactoryMethodInterface $ingredientFactoryMethod,
-        PizzaInterfaceFactory $pizzaFactory
+        private PizzaIngredientFactoryMethodInterface $ingredientFactoryMethod,
+        private PizzaInterfaceFactory $pizzaFactory
     ) {
-        $this->ingredientFactoryMethod = $ingredientFactoryMethod;
-        $this->pizzaFactory = $pizzaFactory;
     }
 
     /**

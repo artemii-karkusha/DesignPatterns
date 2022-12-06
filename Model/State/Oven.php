@@ -40,7 +40,7 @@ class Oven implements OvenInterface
      */
     public function transitionToOvenState(OvenStateInterface $ovenState): void
     {
-        echo "Oven: Transition to " . get_class($ovenState) . "<br>";
+        echo sprintf('Oven: Transition to %s<br>', get_class($ovenState));
         $this->state = $ovenState;
         $this->state->setOven($this);
     }

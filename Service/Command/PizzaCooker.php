@@ -28,8 +28,8 @@ class PizzaCooker implements PizzaCookerInterface
     private PizzaInterface $pizza;
 
     /**
-     * @param PizzaInterfaceFactory $pizzaInterfaceFactory
-     * @param array $pizzaCommandsList
+     * @param PizzaInterfaceFactory $pizzaFactory
+     * @param array $pizzaCommandsFactoryList
      */
     public function __construct(
         PizzaInterfaceFactory $pizzaFactory,
@@ -74,7 +74,7 @@ class PizzaCooker implements PizzaCookerInterface
      * @param array $pizzaCommandFactories
      * @return void
      */
-    private function buildPizzaCommands(array $pizzaCommandFactories)
+    private function buildPizzaCommands(array $pizzaCommandFactories): void
     {
         foreach ($pizzaCommandFactories as $ingredientName => $ingredientFactory) {
             $this->pizzaCommandsList[$ingredientName] = $ingredientFactory->create(['pizza' => $this->pizza]);

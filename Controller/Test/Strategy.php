@@ -12,6 +12,7 @@ use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\ResultFactory;
 use ArtemiiKarkusha\DesignPatterns\Api\Strategy\SorterListInterface;
 use ArtemiiKarkusha\DesignPatterns\Service\Strategy\FastSortStrategy;
+use Magento\Framework\Controller\ResultInterface;
 
 class Strategy implements HttpGetActionInterface
 {
@@ -29,9 +30,8 @@ class Strategy implements HttpGetActionInterface
 
     /**
      * @inheritDoc
-     * @noinspection PhpCSValidationInspection
      */
-    public function execute()
+    public function execute(): ResultInterface
     {
         return $this->resultFactory->create(ResultFactory::TYPE_RAW)->setContents($this->getContents());
     }

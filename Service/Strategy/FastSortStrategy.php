@@ -2,6 +2,8 @@
 /**
  * @author Artemii Karkusha
  * @copyright Copyright (c)
+ *
+ * @noinspection NestedAssignmentsUsageInspection
  */
 
 declare(strict_types=1);
@@ -22,7 +24,7 @@ class FastSortStrategy implements SortListStrategyInterface
             return $list;
         }
 
-        // Определяем промежуточное значение, которое является ссылочным значением
+        // Conceptual example from Internet. Copy
         $intermediateValue = $list[0];
 
         $leftSideFromIntermediateValue = $rightSideFromIntermediateValue = [];

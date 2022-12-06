@@ -14,6 +14,7 @@ use ArtemiiKarkusha\DesignPatterns\Model\Builder\Bacon;
 use ArtemiiKarkusha\DesignPatterns\Model\Builder\Cheese;
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\ResultFactory;
+use Magento\Framework\Controller\ResultInterface;
 use Magento\Framework\Exception\NotFoundException;
 
 class Command implements HttpGetActionInterface
@@ -25,13 +26,13 @@ class Command implements HttpGetActionInterface
     public function __construct(
         private ResultFactory $resultFactory,
         private PizzaCookerInterface $pizzaCooker
-    ) {}
+    ) {
+    }
 
     /**
      * @inheritDoc
-     * @noinspection PhpCSValidationInspection
      */
-    public function execute()
+    public function execute(): ResultInterface
     {
         return $this->resultFactory->create(ResultFactory::TYPE_RAW)
             ->setContents($this->getContents());
@@ -48,7 +49,7 @@ class Command implements HttpGetActionInterface
                 ->addIngredientByName(Cheese::INGREDIENT_NAME)
                 ->makePizza();
             return sprintf(
-                "Pizza ingredients: %s. Pizza objectId : %s",
+                'Pizza ingredients: %s. Pizza objectId : %s',
                 $this->convertPizzaIngratesToString($pizzaWithBaconAndCheese),
                 spl_object_id($pizzaWithBaconAndCheese),
             );

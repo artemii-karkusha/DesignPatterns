@@ -11,6 +11,7 @@ namespace ArtemiiKarkusha\DesignPatterns\Controller\Test;
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\ResultFactory;
 use ArtemiiKarkusha\DesignPatterns\Api\Mediator\ConciergeServiceInterface;
+use Magento\Framework\Controller\ResultInterface;
 use Magento\Framework\Exception\NotFoundException;
 
 class Mediator implements HttpGetActionInterface
@@ -27,9 +28,8 @@ class Mediator implements HttpGetActionInterface
 
     /**
      * @inheritDoc
-     * @noinspection PhpCSValidationInspection
      */
-    public function execute()
+    public function execute(): ResultInterface
     {
         $this->getContents();
         return $this->resultFactory->create(ResultFactory::TYPE_RAW);
@@ -40,13 +40,13 @@ class Mediator implements HttpGetActionInterface
      */
     public function getContents(): void
     {
-        $this->conciergeService->executeRequestByName('CallATaxi');
-        $this->conciergeService->executeRequestByName('CallAMaster');
-        $this->conciergeService->executeRequestByName('DeliveryAFlower');
         try {
+            $this->conciergeService->executeRequestByName('CallATaxi');
+            $this->conciergeService->executeRequestByName('CallAMaster');
+            $this->conciergeService->executeRequestByName('DeliveryAFlower');
             $this->conciergeService->executeRequestByName('DeliveryAFlowerBluBluBlu');
         } catch (NotFoundException $notFoundException) {
-            echo sprintf("%s<br>", $notFoundException->getMessage());
+            echo sprintf('%s<br>', $notFoundException->getMessage());
         }
     }
 }

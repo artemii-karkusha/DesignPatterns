@@ -12,6 +12,7 @@ use ArtemiiKarkusha\DesignPatterns\Service\TemplateMethod\AbstractFileWriter;
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\ResultFactory;
 use ArtemiiKarkusha\DesignPatterns\Api\TemplateMethod\FileWriterInterface;
+use Magento\Framework\Controller\ResultInterface;
 
 class TemplateMethod implements HttpGetActionInterface
 {
@@ -29,9 +30,8 @@ class TemplateMethod implements HttpGetActionInterface
 
     /**
      * @inheritDoc
-     * @noinspection PhpCSValidationInspection
      */
-    public function execute()
+    public function execute(): ResultInterface
     {
         return $this->resultFactory->create(ResultFactory::TYPE_RAW)->setContents($this->getContents());
     }

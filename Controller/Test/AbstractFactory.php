@@ -45,12 +45,9 @@ class AbstractFactory implements HttpGetActionInterface
     }
 
     /**
-     * Execute action based on request and return result
-     *
-     * @return ResultInterface|ResponseInterface
-     * @throws NotFoundException
+     * @inheritDoc
      */
-    public function execute()
+    public function execute(): ResultInterface
     {
         $foods = [];
         try {

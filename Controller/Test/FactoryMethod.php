@@ -12,7 +12,6 @@ use InvalidArgumentException;
 use ArtemiiKarkusha\DesignPatterns\Model\FactoryMethod\Meat;
 use ArtemiiKarkusha\DesignPatterns\Model\FactoryMethod\Potato;
 use Magento\Framework\App\Action\HttpGetActionInterface;
-use Magento\Framework\App\ResponseInterface;
 use Magento\Framework\Controller\ResultInterface;
 use Magento\Framework\Exception\NotFoundException;
 use Magento\Framework\Controller\ResultFactory;
@@ -44,17 +43,15 @@ class FactoryMethod implements HttpGetActionInterface
     }
 
     /**
-     * Execute action based on request and return result
-     * @return ResultInterface|ResponseInterface
-     * @throws NotFoundException
+     * @inheritDoc
      */
-    public function execute()
+    public function execute(): ResultInterface
     {
         try {
             $meat = $this->bake->cook(Meat::MEAT_NAME);
             $potato = $this->bake->cook(Potato::MEAT_NAME);
-            $responseText = sprintf("Meat getName is %s", $meat->getName());
-            $responseText .= sprintf(", Potato getName is %s", $potato->getName());
+            $responseText = sprintf('Meat getName is %s', $meat->getName());
+            $responseText .= sprintf(', Potato getName is %s', $potato->getName());
         } catch (InvalidArgumentException $invalidArgumentException) {
             throw new NotFoundException(__($invalidArgumentException->getMessage()));
         }

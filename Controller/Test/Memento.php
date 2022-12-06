@@ -13,6 +13,7 @@ use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\ResultFactory;
 use ArtemiiKarkusha\DesignPatterns\Api\Memento\Model\TextAreaInterfaceFactory;
 use ArtemiiKarkusha\DesignPatterns\Api\Memento\CaretakerInterface;
+use Magento\Framework\Controller\ResultInterface;
 use Magento\Framework\Exception\NotFoundException;
 
 class Memento implements HttpGetActionInterface
@@ -31,9 +32,8 @@ class Memento implements HttpGetActionInterface
 
     /**
      * @inheritDoc
-     * @noinspection PhpCSValidationInspection
      */
-    public function execute()
+    public function execute(): ResultInterface
     {
         $this->getContents();
         return $this->resultFactory->create(ResultFactory::TYPE_RAW);
@@ -58,18 +58,18 @@ class Memento implements HttpGetActionInterface
         $this->caretaker->showHistory($textArea);
         $textArea->setText('Text Version 5');
         echo 'before Undo <br>';
-        echo $textArea->getText('Text Version 5') . '<br>';
+        echo $textArea->getText() . '<br>';
         $this->caretaker->undo($textArea);
         echo 'after Undo <br>';
         echo $textArea->getText() . '<br>';
         $this->caretaker->showHistory($textArea);
         echo 'before restoreToVersion 1<br>';
         echo $textArea->getText() . '<br>';
-        $this->caretaker->restoreToVersion($textArea, 1);
-        echo 'after restoreToVersion 1<br>';
-        echo $textArea->getText() . '<br>';
 
         try {
+            $this->caretaker->restoreToVersion($textArea, 1);
+            echo 'after restoreToVersion 1<br>';
+            echo $textArea->getText() . '<br>';
             $this->caretaker->restoreToVersion($textArea, 25);
         } catch (NotFoundException $notFoundException) {
             echo $notFoundException->getMessage() . '<br>';

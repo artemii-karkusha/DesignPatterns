@@ -14,14 +14,11 @@
         <arguments>
             <argument name="foodsFactoryForKitchens" xsi:type="array">
                 <item name="americanFoodFactory"
-                      xsi:type="object">ArtemiiKarkusha\DesignPatterns\Service\AbstractFactory\AmericanFoodFactoryMethod
-                </item>
+                      xsi:type="object">ArtemiiKarkusha\DesignPatterns\Service\AbstractFactory\AmericanFoodFactoryMethod</item>
                 <item name="ukrainianFoodFactory"
-                      xsi:type="object">ArtemiiKarkusha\DesignPatterns\Service\AbstractFactory\UkrainianFoodFactoryMethod
-                </item>
+                      xsi:type="object">ArtemiiKarkusha\DesignPatterns\Service\AbstractFactory\UkrainianFoodFactoryMethod</item>
                 <item name="japaneseFoodFactory"
-                      xsi:type="object">ArtemiiKarkusha\DesignPatterns\Service\AbstractFactory\JapaneseFoodFactoryMethod
-                </item>
+                      xsi:type="object">ArtemiiKarkusha\DesignPatterns\Service\AbstractFactory\JapaneseFoodFactoryMethod</item>
             </argument>
         </arguments>
     </type>

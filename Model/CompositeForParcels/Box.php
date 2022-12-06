@@ -24,7 +24,7 @@ class Box implements ContainerOfParcelInterface
     public function __construct(private float $weight = 0.0) {}
 
     /**
-     * @inheritDoc
+     * @return float
      */
     private function getSelfWeight(): float
     {

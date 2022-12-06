@@ -21,7 +21,7 @@ class JapaneseFoodFactoryMethod extends FoodFactoryMethod implements FoodFactory
     /**
      * @var string[]
      */
-    public static $foodFactoryList = [
+    public static array $foodFactoryList = [
         Noodles::FOOD_NAME => Noodles::class,
         Sushi::FOOD_NAME => Sushi::class
     ];

@@ -13,7 +13,7 @@ use ArtemiiKarkusha\DesignPatterns\Api\FactoryMethod\FoodInterface;
 use ArtemiiKarkusha\DesignPatterns\Api\FactoryMethod\FoodFactoryMethodInterface;
 
 /**
- * It is bake for cook food.
+ * It is a bake for cook food.
  */
 class Bake
 {
